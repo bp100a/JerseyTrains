@@ -93,11 +93,11 @@ class NJTransitAPI:
                             if stop.tag == 'NAME':
                                 station_name = stop.text
                             elif stop.tag == 'TIME':
-                                this_stop.update({'time': stop.text})
+                                this_stop.update({'time': datetime.strptime(stop.text, '%d-%b-%Y %I:%M:%S %p')})
                             elif stop.tag == 'STOP_STATUS':
                                 this_stop.update({'status': stop.text})
                             elif stop.tag == 'DEPARTED':
-                                this_stop.update({'departed': stop.text})
+                                this_stop.update({'departed': (stop.text == 'YES')})
 
                         stop_list.update({station_name: this_stop})
 
