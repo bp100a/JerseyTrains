@@ -27,7 +27,7 @@ class TestTrainScheduler(TestCase):
 
         # mock the request
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestTrainScheduler.read_test_data('train_stations.raw')
+        test_bytes = TestTrainScheduler.read_test_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         scheduler = train_scheduler.TrainSchedule()

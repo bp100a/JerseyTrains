@@ -50,7 +50,7 @@ class TestNJTransitAPI(TestCase):
 
         # mock the request
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestNJTransitAPI.read_test_data('train_stations.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         station_list = njt.train_stations
@@ -63,7 +63,7 @@ class TestNJTransitAPI(TestCase):
 
         # mock the request
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestNJTransitAPI.read_test_data('train_stations.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         station_list = njt._NJTransitAPI__fetch_train_stations()
@@ -76,7 +76,7 @@ class TestNJTransitAPI(TestCase):
 
         # mock the request
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestNJTransitAPI.read_test_data('train_stations.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.NOT_FOUND)
 
         station_list = njt._NJTransitAPI__fetch_train_stations()
@@ -100,7 +100,7 @@ class TestNJTransitAPI(TestCase):
 
         # get the trains for Chatham station from our canned data
         url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
-        test_bytes = TestNJTransitAPI.read_test_data('train_schedule.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_schedule.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         train_list = njt.train_schedule(station_abbreviation='CM')
@@ -116,7 +116,7 @@ class TestNJTransitAPI(TestCase):
 
         # get the trains for Chatham station from our canned data
         url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
-        test_bytes = TestNJTransitAPI.read_test_data('train_schedule.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_schedule.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.NOT_FOUND)
 
         train_list = njt.train_schedule(station_abbreviation='CM')
@@ -146,7 +146,7 @@ class TestNJTransitAPI(TestCase):
 
         # get the trains for Chatham station from our canned data
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationScheduleXML"
-        test_bytes = TestNJTransitAPI.read_test_data('station_schedule.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('station_schedule.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         train_list = njt.station_schedule(station_abbreviation='CM')
@@ -163,7 +163,7 @@ class TestNJTransitAPI(TestCase):
 
         # get the trains for Chatham station from our canned data
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationScheduleXML"
-        test_bytes = TestNJTransitAPI.read_test_data('station_schedule.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('station_schedule.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.NOT_FOUND)
 
         train_list = njt.station_schedule(station_abbreviation='CM')
@@ -187,7 +187,7 @@ class TestNJTransitAPI(TestCase):
 
         # get the trains for Chatham station from our canned data
         url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainStopListJSON"
-        test_bytes = TestNJTransitAPI.read_test_data('train_stops.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_stops.json')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         stop_list = njt.train_stops(train_id='6919')  # train_id doesn't matter since pre-canned
@@ -203,7 +203,7 @@ class TestNJTransitAPI(TestCase):
 
         # get the trains for Chatham station from our canned data
         url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainStopListJSON"
-        test_bytes = TestNJTransitAPI.read_test_data('train_stops.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_stops.json')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.NOT_FOUND)
 
         stop_list = njt.train_stops(train_id='6919')  # train_id doesn't matter since pre-canned
@@ -229,7 +229,7 @@ class TestNJTransitAPI(TestCase):
 
         # get the trains for Chatham station from our canned data
         url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
-        test_bytes = TestNJTransitAPI.read_test_data('train_schedule.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_schedule.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         njt = TestNJTransitAPI.create_tst_object()
@@ -239,7 +239,7 @@ class TestNJTransitAPI(TestCase):
         # that have our 2nd station as a stop
         prospective_trains = []
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestNJTransitAPI.read_test_data('train_stations.raw')
+        test_bytes = TestNJTransitAPI.read_test_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
         station_list = njt._NJTransitAPI__fetch_train_stations()
         end_station_name = station_list[end_station]
