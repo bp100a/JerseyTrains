@@ -2,7 +2,7 @@
 """orchestration for our train schedules"""
 import time
 from njtransit import api
-
+from datetime import datetime
 
 class TrainSchedule:
     """will produce train schedules"""
@@ -20,7 +20,7 @@ class TrainSchedule:
         """make sure the station name is valid"""
         return station_name in self.njt.train_stations
 
-    def schedule(self, starting_station: str, ending_station: str, departure_time: time) -> dict:
+    def schedule(self, starting_station: str, ending_station: str, departure_time: datetime) -> dict:
         """given two stations, find all trains scheduled
         for the specified departure time"""
         assert self.njt
@@ -34,15 +34,22 @@ class TrainSchedule:
         # the train goes directly to the ending station
         # ignore trains that are leaving after our proposed
         # departure time
-        direct_trains = []
-        possible_indirect_trains = []
-        for train in starting_station_trains:
-            if train['stops'][starting_station]['time'] > departure_time:
-                continue
-            if ending_station in train['stops']:
-                direct_trains.append(train)
-            else:
-                possible_indirect_trains.append(train)
+        try:
+            direct_trains = []
+            possible_indirect_trains = []
+            for train in starting_station_trains:
+                starting_station_name = self.njt.train_stations[starting_station]
+                if starting_station_name not in train['stops']:  # weird case to catch
+                    continue
+                if train['stops'][starting_station_name]\
+                ['time'] < departure_time:
+                    continue
+                if self.njt.train_stations[ending_station] in train['stops']:
+                    direct_trains.append(train)
+                else:
+                    possible_indirect_trains.append(train)
+        except KeyError as ke:
+            print(ke.__str__())
 
         # okay we have our direct routes, now we need to
         # look for indirect routes. We created a list

@@ -122,6 +122,12 @@ class TestNJTransitAPI(TestCase):
         train_list = njt.train_schedule(station_abbreviation='CM')
         assert not train_list
 
+    @staticmethod
+    def XXXX_fetch_train_schedule_live():
+        njt = TestNJTransitAPI.create_tst_object()
+        train_list = njt.train_schedule(station_abbreviation='NY')
+        assert not train_list
+
     @responses.activate
     def test_train_schedule_parse_error(self):
         njt = TestNJTransitAPI.create_tst_object()
