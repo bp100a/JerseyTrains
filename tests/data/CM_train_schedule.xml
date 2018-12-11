@@ -1,0 +1,1981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<STATION>
+  <STATION_2CHAR>CM</STATION_2CHAR>
+  <STATIONNAME>Chatham</STATIONNAME>
+  <ITEMS>
+    <ITEM>
+      <ITEM_INDEX>0</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 01:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6924</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS>in 21 Min</STATUS>
+      <SEC_LATE>105</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 01:15:28 PM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <GPSLATITUDE>40.875839</GPSLATITUDE>
+      <GPSLONGITUDE>-74.482074</GPSLONGITUDE>
+      <GPSTIME>08-Dec-2018 01:12:29 PM</GPSTIME>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 01:05:30 PM</TIME>
+          <DEPARTED>YES</DEPARTED>
+          <STOP_STATUS>Delayed</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 01:12:52 PM</TIME>
+          <DEPARTED>YES</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 01:20:40 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 01:25:09 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 01:28:17 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 01:32:13 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 01:36:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 01:41:33 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 01:46:40 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 01:48:33 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 01:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 01:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Highland Ave.</NAME>
+          <TIME>08-Dec-2018 02:00:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 02:03:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 02:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 02:09:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 02:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 02:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 02:39:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>1</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 02:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6925</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>90</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 01:15:03 PM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <GPSLATITUDE>40.756283</GPSLATITUDE>
+      <GPSLONGITUDE>-74.005863</GPSLONGITUDE>
+      <GPSTIME>08-Dec-2018 01:15:01 PM</GPSTIME>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 01:11:00 PM</TIME>
+          <DEPARTED>YES</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 01:21:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 01:31:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 01:37:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 01:39:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 01:42:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Highland Ave.</NAME>
+          <TIME>08-Dec-2018 01:45:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 01:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 01:52:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 01:57:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 02:01:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 02:08:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 02:16:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 02:20:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 02:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 02:29:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 02:33:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mount Tabor</NAME>
+          <TIME>08-Dec-2018 02:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 02:43:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 02:57:30 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>2</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 02:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6926</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 02:03:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 02:09:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mount Tabor</NAME>
+          <TIME>08-Dec-2018 02:12:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 02:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 02:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 02:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 02:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 02:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 02:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 02:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 02:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 02:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 02:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Stn</NAME>
+          <TIME>08-Dec-2018 02:59:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 03:03:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 03:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 03:09:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 03:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 03:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 03:39:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>3</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 03:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6927</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 02:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 02:20:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 02:29:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 02:35:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 02:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 02:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Stn</NAME>
+          <TIME>08-Dec-2018 02:45:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 02:47:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 02:50:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 02:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 02:59:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 03:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 03:14:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 03:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 03:23:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 03:27:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 03:32:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 03:40:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 03:54:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>4</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 03:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6928</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 03:05:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 03:11:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 03:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 03:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 03:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 03:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 03:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 03:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 03:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 03:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 03:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 03:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Highland Ave.</NAME>
+          <TIME>08-Dec-2018 04:00:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 04:03:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 04:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 04:09:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 04:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 04:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 04:39:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>5</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 04:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6929</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 03:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 03:20:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 03:30:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 03:35:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 03:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 03:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Highland Ave.</NAME>
+          <TIME>08-Dec-2018 03:43:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 03:47:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 03:50:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 03:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 03:59:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 04:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 04:14:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 04:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 04:23:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 04:27:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 04:32:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 04:40:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 04:54:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>6</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 04:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6930</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 04:05:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 04:11:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 04:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 04:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 04:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 04:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 04:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 04:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 04:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 04:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 04:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 04:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Stn</NAME>
+          <TIME>08-Dec-2018 04:59:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 05:03:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 05:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 05:09:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 05:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 05:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 05:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>7</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 05:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6931</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 04:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 04:20:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 04:29:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 04:35:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 04:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 04:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Stn</NAME>
+          <TIME>08-Dec-2018 04:45:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 04:47:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 04:50:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 04:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 04:59:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 05:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 05:14:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 05:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 05:23:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 05:27:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 05:32:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mount Tabor</NAME>
+          <TIME>08-Dec-2018 05:39:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 05:41:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 05:56:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>8</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 05:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6932</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 05:03:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 05:09:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mount Tabor</NAME>
+          <TIME>08-Dec-2018 05:12:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 05:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 05:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 05:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 05:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 05:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 05:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 05:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 05:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 05:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 05:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Highland Ave.</NAME>
+          <TIME>08-Dec-2018 06:00:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 06:03:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 06:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 06:09:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 06:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 06:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 06:39:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>9</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 06:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6933</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 05:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 05:20:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 05:29:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 05:35:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 05:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 05:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Highland Ave.</NAME>
+          <TIME>08-Dec-2018 05:43:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 05:47:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 05:50:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 05:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 05:59:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 06:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 06:14:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 06:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 06:23:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 06:27:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 06:32:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mount Tabor</NAME>
+          <TIME>08-Dec-2018 06:39:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 06:41:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 06:56:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>10</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 06:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6934</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 06:05:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 06:11:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>08-Dec-2018 06:18:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>08-Dec-2018 06:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>08-Dec-2018 06:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>08-Dec-2018 06:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 06:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 06:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 06:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 06:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 06:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 06:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Stn</NAME>
+          <TIME>08-Dec-2018 06:59:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 07:03:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 07:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 07:09:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>11</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 07:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6935</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 06:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>08-Dec-2018 06:20:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>08-Dec-2018 06:29:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>08-Dec-2018 06:35:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>08-Dec-2018 06:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>08-Dec-2018 06:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Stn</NAME>
+          <TIME>08-Dec-2018 06:45:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>08-Dec-2018 06:47:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>08-Dec-2018 06:50:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>08-Dec-2018 06:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>08-Dec-2018 06:59:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>08-Dec-2018 07:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>08-Dec-2018 07:14:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>12</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 07:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6936</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>08-Dec-2018 07:05:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>08-Dec-2018 07:11:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>13</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 08:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6937</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>08-Dec-2018 07:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>14</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 08:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6938</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS />
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>15</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 09:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6939</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS />
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>16</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 09:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6940</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS />
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>17</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 10:15:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>Dover</DESTINATION>
+      <TRACK>1</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6941</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS />
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>18</ITEM_INDEX>
+      <SCHED_DEP_DATE>08-Dec-2018 10:35:30 PM</SCHED_DEP_DATE>
+      <DESTINATION>NY Penn -SEC</DESTINATION>
+      <TRACK>2</TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6942</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>08-Dec-2018 12:00:59 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>1</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS />
+    </ITEM>
+  </ITEMS>
+</STATION>
