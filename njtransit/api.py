@@ -80,7 +80,8 @@ class NJTransitAPI:
                 elif item.tag == 'DESTINATION':
                     this_train.update({'destination': item.text})
                 elif item.tag == 'SCHED_DEP_DATE':
-                    this_train.update({'departure': datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')})
+                    this_train.update({'departure':
+                                           datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')})
 
                 if 'departure' in this_train and \
                     'destination' in this_train and \
@@ -93,7 +94,9 @@ class NJTransitAPI:
                             if stop.tag == 'NAME':
                                 station_name = stop.text
                             elif stop.tag == 'TIME':
-                                this_stop.update({'time': datetime.strptime(stop.text, '%d-%b-%Y %I:%M:%S %p')})
+                                this_stop.update({'time':
+                                                      datetime.strptime(stop.text,
+                                                                        '%d-%b-%Y %I:%M:%S %p')})
                             elif stop.tag == 'STOP_STATUS':
                                 this_stop.update({'status': stop.text})
                             elif stop.tag == 'DEPARTED':
@@ -194,6 +197,7 @@ class NJTransitAPI:
 
     @property
     def train_stations(self) -> dict:
+        """get the list of train stations"""
         if not self.__train_stations:
             self.__train_stations = self.__fetch_train_stations()
         return self.__train_stations
