@@ -80,7 +80,8 @@ class NJTransitAPI:
                 elif item.tag == 'DESTINATION':
                     this_train.update({'destination': item.text})
                 elif item.tag == 'SCHED_DEP_DATE':
-                    this_train.update({'departure': datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')})
+                    this_train.update({'departure':
+                                           datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')})
 
                 if 'departure' in this_train and \
                     'destination' in this_train and \
@@ -94,8 +95,10 @@ class NJTransitAPI:
                                 station_name = stop.text
                             elif stop.tag == 'TIME':
                                 if stop.text is None:
-                                    print("Gottcha!")
-                                this_stop.update({'time': datetime.strptime(stop.text, '%d-%b-%Y %I:%M:%S %p')})
+                                    continue  # skip this!
+                                this_stop.update({'time':
+                                                      datetime.strptime(stop.text,
+                                                                        '%d-%b-%Y %I:%M:%S %p')})
                             elif stop.tag == 'STOP_STATUS':
                                 this_stop.update({'status': stop.text})
                             elif stop.tag == 'DEPARTED':
@@ -109,15 +112,23 @@ class NJTransitAPI:
 
         return train_list
 
-    def train_schedule(self, station_abbreviation: str) -> list:
-        """returns all the trains departing this station"""
+    def train_schedule(self, station_abbreviation: str,
+                       test_argument: str = None) -> list:
+        """returns all the trains departing this station
+        this is 'real-time' and shows current status of trains
+        to/from this station
+
+        :param station_abbreviation: 2 character abbreviation for station
+        :param test_argument: Unit Tests Only! specifies what test data to use
+        :return:
+
+        """
         assert self.username and self.apikey
         url = config.HOSTNAME +\
               "/NJTTrainData.asmx/getTrainScheduleXML"
-        body = "username={0}&password={1}&station={2}&NJT_Only=".\
-            format(self.username, self.apikey, station_abbreviation)
+        body = "username={0}&password={1}&station={2}&NJT_Only={3}".\
+            format(self.username, self.apikey, station_abbreviation, test_argument)
         try:
-            response_string = None
             rsp = requests.request(method='POST',
                                    url=url,
                                    headers={'content-type': 'application/x-www-form-urlencoded',
@@ -136,7 +147,9 @@ class NJTransitAPI:
         return []
 
     def station_schedule(self, station_abbreviation: str) -> list:
-        """returns all the trains departing this station"""
+        """returns all the trains departing this station for a given day,
+        not real-time data, but a list of all trains to/from the specified
+        station"""
         assert self.username and self.apikey
         url = config.HOSTNAME +\
               "/NJTTrainData.asmx/getStationScheduleXML"
@@ -196,6 +209,7 @@ class NJTransitAPI:
 
     @property
     def train_stations(self) -> dict:
+        """return the list of train stations"""
         if not self.__train_stations:
             self.__train_stations = self.__fetch_train_stations()
         return self.__train_stations

@@ -1,7 +1,6 @@
 #!/usr/bin/python
 from unittest import TestCase
 import os
-import time
 from datetime import datetime
 from http import HTTPStatus
 from urllib import parse
@@ -24,7 +23,7 @@ class TestTrainScheduler(TestCase):
         return data
 
     def test_validate_station_name(self):
-
+        """verify we can find station name in the name list"""
         # mock the request
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
         test_bytes = TestTrainScheduler.read_test_data('train_stations.xml')
@@ -52,7 +51,7 @@ class TestTrainScheduler(TestCase):
         api twice, we use a callback to provide the proper canned
         responses"""
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestTrainScheduler.read_test_data('train_stations.raw')
+        test_bytes = TestTrainScheduler.read_test_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
@@ -62,6 +61,7 @@ class TestTrainScheduler(TestCase):
             content_type='text/xml',)
 
         scheduler = train_scheduler.TrainSchedule()
-        scheduler.schedule(starting_station='CM', ending_station='NY', departure_time=datetime.now())
+        train_routes = scheduler.schedule(starting_station_abbreviated='CM', ending_station_abbreviated='NY', departure_time=datetime.now())
 
-        assert False
+        assert train_routes
+
