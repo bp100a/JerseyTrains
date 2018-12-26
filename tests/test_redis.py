@@ -43,3 +43,25 @@ class TestRedis(TestCase):
         assert isinstance(just_cached, dict)
         added, removed, modified, same = TestRedis.dict_compare(just_cached, just_cached)
         assert same
+
+    def test_redis_cache_no_station_list(self):
+        fake = fakeredis.FakeStrictRedis(singleton=False)
+        cloudredis.initialize_cloud_redis(injected_server=fake)
+
+        just_cached = cloudredis.station_list()
+        assert not just_cached
+
+    def test_redis_cache_not_exists(self):
+        fake = fakeredis.FakeStrictRedis()
+        cloudredis.initialize_cloud_redis(injected_server=fake)
+        assert not cloudredis.exists('bogus_key')
+
+    def test_redis_cache_exists(self):
+        fake = fakeredis.FakeStrictRedis()
+        cloudredis.initialize_cloud_redis(injected_server=fake)
+        assert not cloudredis.exists('station_list')
+        to_cache = {'CM': 'Chatham',
+                    'NY': 'New York',
+                    'SE': 'Secaucus'}
+        cloudredis.cache_station_list(to_cache)
+        assert cloudredis.exists('station_list')

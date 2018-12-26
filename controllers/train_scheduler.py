@@ -89,7 +89,7 @@ class TrainSchedule:
         # we are looking for all routes where there's an intersection
         # between the 'possible_indirect_trains' and this list.
         transfer_routes = []
-        transfer_threshold = timedelta(minutes=35)  # wait no more than 20 minutes
+        transfer_threshold = timedelta(minutes=5)  # allow at least 5 minutes to transfer
         for start_train in possible_indirect_trains:
             for transfer_train in ending_station_trains:
                 if starting_station in transfer_train['stops']:
@@ -120,8 +120,8 @@ class TrainSchedule:
 
                     # finally, make sure we have enough time to catch the train
                     wait_time = transfer_station['time'] - \
-                                start_train['stops'][start_stations]['time']
-                    if wait_time > transfer_threshold:
+                        start_train['stops'][start_stations]['time']
+                    if wait_time < transfer_threshold:
                         continue
 
                     # It looks like we found a winner!

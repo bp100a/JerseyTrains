@@ -313,6 +313,25 @@ test_data = {'test_schedule_1':
                          'stops': ['11', '12', '13', '19']}, # express train
                   '07': {'depart': '11-Dec-2018 02:55:00 AM',
                          'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '19']},  # @15 4:55am, 6:25am arrival
+                  },
+
+             'test_schedule_4':
+                 {'01': {'depart': '11-Dec-2018 01:00:00 AM',
+                         'stops': ['11', '12', '13', '14', '15', '16', '17', '18', '19']},  # all stops
+                  '02': {'depart': '11-Dec-2018 02:00:00 AM',
+                         'stops': ['11', '12', '13', '14', '16', '17', '19']},  # no stop at intersection
+                  '03': {'depart': '11-Dec-2018 12:00:00 AM',
+                         'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '18']},  # no stop at terminus
+                  '04': {'depart': '11-Dec-2018 03:00:00 AM',
+                         'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '19']},  # @15 5:00am, 6:30am
+                  '05': {'depart': '11-Dec-2018 02:30:00 AM',
+                         'stops': ['11', '12', '13', '14', '15', '18']},  # connection for '04' @15 4:30am
+                  '06': {'depart': '11-Dec-2018 04:30:00 AM',
+                         'stops': ['11', '12', '13', '19']}, # express train
+                  '07': {'depart': '11-Dec-2018 02:33:00 AM',
+                         'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '19']},  # @15 4:33am (not enough time to xfer)
+                  '08': {'depart': '11-Dec-2018 02:25:00 AM',
+                         'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '19']},  # @15 4:25am
                   }
 
              }
@@ -473,3 +492,32 @@ class TestSchedulerGeneratedData(TestCase):
         assert len(train_routes['indirect']) == 1
         # route 05 -> 04 arrives at 5am whereas 05 -> 07 arrives at 4:55am, so only one route is optimal
         assert train_routes['indirect'][0]['start']['tid'] == '05' and train_routes['indirect'][0]['transfer']['tid'] == '07'
+
+    @responses.activate
+    def test_schedule_4(self):
+        """Since the train scheduler calls the getTrainScheduleXML
+        api twice, we use a callback to provide the proper canned
+        responses"""
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_station_list,
+            content_type='text/xml',)
+
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_train_schedule,
+            content_type='text/xml',)
+
+        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        scheduler = train_scheduler.TrainSchedule()
+        train_routes = scheduler.schedule(starting_station_abbreviated='11',
+                                          ending_station_abbreviated='19',
+                                          departure_time=test_time,
+                                          test_argument='test_schedule_4')
+        assert train_routes['indirect']
+        assert train_routes['direct'][0]['tid'] == '02' and train_routes['direct'][1]['tid'] == '06'
+        assert len(train_routes['indirect']) == 1
+        # route 05 -> 04 arrives at 5am whereas 05 -> 07 only allows 3 minutes to transfer, so discarded
+        assert train_routes['indirect'][0]['start']['tid'] == '05' and train_routes['indirect'][0]['transfer']['tid'] == '04'
