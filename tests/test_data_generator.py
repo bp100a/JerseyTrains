@@ -272,7 +272,7 @@ class TestDataGenerator(TestCase):
 # for travel between '11' -> '19':
 #   direct routes: #01, #02, #06
 #   indirect routes: #05:04
-test_data = {'test_schedule_1': \
+test_data = {'test_schedule_1':
                  {'01': {'depart': '11-Dec-2018 01:00:00 AM',
                          'stops': ['11', '12', '13', '14', '15', '16', '17', '18', '19']},  # all stops
                   '02': {'depart': '11-Dec-2018 02:00:00 AM',
@@ -285,7 +285,36 @@ test_data = {'test_schedule_1': \
                          'stops': ['11', '12', '13', '14', '15', '18']},  # connection for '04'
                   '06': {'depart': '11-Dec-2018 04:30:00 AM',
                          'stops': ['11', '12', '13', '19']}  # express train
+                  },
+             'test_schedule_2':
+                  {'01': {'depart': '11-Dec-2018 01:00:00 AM',
+                          'stops': ['11', '12', '13', '14', '15', '16', '17', '18', '19']},  # all stops
+                   '02': {'depart': '11-Dec-2018 02:00:00 AM',
+                          'stops': ['11', '12', '13', '14', '16', '17', '19']},  # no stop at intersection
+                   '03': {'depart': '11-Dec-2018 12:00:00 AM',
+                          'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '18']},  # no stop at terminus
+                   '04': {'depart': '11-Dec-2018 03:00:00 AM',
+                          'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '19']},  # good transfer
+                   '06': {'depart': '11-Dec-2018 04:30:00 AM',
+                          'stops': ['11', '12', '13', '19']}  # express train
+                   },
+             'test_schedule_3':
+                 {'01': {'depart': '11-Dec-2018 01:00:00 AM',
+                         'stops': ['11', '12', '13', '14', '15', '16', '17', '18', '19']},  # all stops
+                  '02': {'depart': '11-Dec-2018 02:00:00 AM',
+                         'stops': ['11', '12', '13', '14', '16', '17', '19']},  # no stop at intersection
+                  '03': {'depart': '11-Dec-2018 12:00:00 AM',
+                         'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '18']},  # no stop at terminus
+                  '04': {'depart': '11-Dec-2018 03:00:00 AM',
+                         'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '19']},  # @15 5:00am, 6:30am
+                  '05': {'depart': '11-Dec-2018 02:30:00 AM',
+                         'stops': ['11', '12', '13', '14', '15', '18']},  # connection for '04' @15 4:30am
+                  '06': {'depart': '11-Dec-2018 04:30:00 AM',
+                         'stops': ['11', '12', '13', '19']}, # express train
+                  '07': {'depart': '11-Dec-2018 02:55:00 AM',
+                         'stops': ['2A', '2B', '2C', '2D', '15', '16', '17', '19']},  # @15 4:55am, 6:25am arrival
                   }
+
              }
 
 
@@ -307,7 +336,7 @@ class TestSchedulerGeneratedData(TestCase):
         return HTTPStatus.CREATED, {'content-type': 'text/xml'}, schedule
 
     @responses.activate
-    def test_schedule(self):
+    def test_schedule_1(self):
         """Since the train scheduler calls the getTrainScheduleXML
         api twice, we use a callback to provide the proper canned
         responses"""
@@ -335,3 +364,112 @@ class TestSchedulerGeneratedData(TestCase):
         assert len(train_routes['indirect']) == 1
         assert train_routes['indirect'][0]['station'] == 'Line 1 Station 5'
         assert train_routes['direct'][0]['tid'] == '02' and train_routes['direct'][1]['tid'] == '06'
+
+    @responses.activate
+    def test_schedule_2(self):
+        """Since the train scheduler calls the getTrainScheduleXML
+        api twice, we use a callback to provide the proper canned
+        responses"""
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_station_list,
+            content_type='text/xml',)
+
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_train_schedule,
+            content_type='text/xml',)
+
+        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        scheduler = train_scheduler.TrainSchedule()
+        train_routes = scheduler.schedule(starting_station_abbreviated='11',
+                                          ending_station_abbreviated='19',
+                                          departure_time=test_time,
+                                          test_argument='test_schedule_2')
+        assert train_routes
+        assert train_routes['direct']
+        assert not train_routes['indirect']
+        assert train_routes['direct'][0]['tid'] == '02' and train_routes['direct'][1]['tid'] == '06'
+
+    @responses.activate
+    def test_schedule_1a(self):
+        """Since the train scheduler calls the getTrainScheduleXML
+        api twice, we use a callback to provide the proper canned
+        responses"""
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_station_list,
+            content_type='text/xml',)
+
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_train_schedule,
+            content_type='text/xml',)
+
+        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        scheduler = train_scheduler.TrainSchedule()
+        train_routes = scheduler.schedule(starting_station_abbreviated='11',
+                                          ending_station_abbreviated='18',
+                                          departure_time=test_time,
+                                          test_argument='test_schedule_1')
+        assert not train_routes['indirect']
+        assert train_routes['direct'][0]['tid'] == '05'
+
+    @responses.activate
+    def test_schedule_3_no_trains(self):
+        """Since the train scheduler calls the getTrainScheduleXML
+        api twice, we use a callback to provide the proper canned
+        responses"""
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_station_list,
+            content_type='text/xml',)
+
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_train_schedule,
+            content_type='text/xml',)
+
+        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        scheduler = train_scheduler.TrainSchedule()
+        train_routes = scheduler.schedule(starting_station_abbreviated='11',
+                                          ending_station_abbreviated='2A',
+                                          departure_time=test_time,
+                                          test_argument='test_schedule_3')
+        assert not train_routes['direct']
+        assert not train_routes['indirect']
+
+    @responses.activate
+    def test_schedule_3(self):
+        """Since the train scheduler calls the getTrainScheduleXML
+        api twice, we use a callback to provide the proper canned
+        responses"""
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_station_list,
+            content_type='text/xml',)
+
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
+        responses.add_callback(
+            responses.POST, url,
+            callback=TestSchedulerGeneratedData.request_callback_train_schedule,
+            content_type='text/xml',)
+
+        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        scheduler = train_scheduler.TrainSchedule()
+        train_routes = scheduler.schedule(starting_station_abbreviated='11',
+                                          ending_station_abbreviated='19',
+                                          departure_time=test_time,
+                                          test_argument='test_schedule_3')
+        assert train_routes['indirect']
+        assert train_routes['direct'][0]['tid'] == '02' and train_routes['direct'][1]['tid'] == '06'
+        assert len(train_routes) == 1
+        # route 05 -> 04 arrives at 5am whereas 05 -> 07 arrives at 4:55am, so only one route is optimal
+        assert train_routes['indirect'][0]['start']['tid'] == '05' and train_routes['indirect'][0]['transfer']['tid'] == '07'

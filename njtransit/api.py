@@ -174,7 +174,7 @@ class NJTransitAPI:
 
         return None
 
-    def train_stops(self, train_id: str) -> list:
+    def train_stops(self, train_id: str) -> dict:
         """return all the stops for the train"""
         assert self.username and self.apikey
         url = config.HOSTNAME +\
@@ -203,7 +203,7 @@ class NJTransitAPI:
         except ET.ParseError as perr:
             print(perr.__str__())
 
-        return []
+        return {}
 
     __train_stations = {}  # our private list of train stations
 
