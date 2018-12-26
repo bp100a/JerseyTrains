@@ -25,12 +25,13 @@ class TrainSchedule:
         return station_name in self.njt.train_stations
 
     @staticmethod
-    def optimize_indirect_routes(indirect_routes: list) -> list:
+    def optimize_indirect_routes(indirect_routes: list, destination: str) -> list:
         """
         From our list of indirect routes, remove any that are
         redundant, that is starting with same train but arriving
         later at the destination after a transfer.
         :param indirect_routes: list of current indirect train routes
+        :param destination - our destination station
         :return: optimized list of indirect routes
         """
         # we need to determine if we should add this route to the list, or
@@ -50,10 +51,20 @@ class TrainSchedule:
         #     b) this route arrives at the terminus
         #        before existing route
         #
+        optimized = []
         for current in indirect_routes:
-            pass
+            best = current
+            for same_start in indirect_routes:
+                if current == same_start:
+                    continue
+                if current['start']['tid'] == same_start['start']['tid']:
+                    if current['transfer']['stops'][destination]['time'] > \
+                            same_start['transfer']['stops'][destination]['time']:
+                        best = same_start
+            if best not in optimized:
+                optimized.append(best)
 
-        return indirect_routes
+        return optimized
 
     def schedule_indirect_routes(self, possible_indirect_trains: list,
                                  starting_station: str,
@@ -120,7 +131,7 @@ class TrainSchedule:
                     break
 
         # remove any redundant routes from the list
-        return TrainSchedule.optimize_indirect_routes(transfer_routes)
+        return TrainSchedule.optimize_indirect_routes(transfer_routes, ending_station)
 
     def schedule(self, starting_station_abbreviated: str,
                  ending_station_abbreviated:

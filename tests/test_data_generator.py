@@ -470,6 +470,6 @@ class TestSchedulerGeneratedData(TestCase):
                                           test_argument='test_schedule_3')
         assert train_routes['indirect']
         assert train_routes['direct'][0]['tid'] == '02' and train_routes['direct'][1]['tid'] == '06'
-        assert len(train_routes) == 1
+        assert len(train_routes['indirect']) == 1
         # route 05 -> 04 arrives at 5am whereas 05 -> 07 arrives at 4:55am, so only one route is optimal
         assert train_routes['indirect'][0]['start']['tid'] == '05' and train_routes['indirect'][0]['transfer']['tid'] == '07'
