@@ -1,0 +1,2157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<STATION>
+  <STATION_2CHAR>NY</STATION_2CHAR>
+  <STATIONNAME>New York</STATIONNAME>
+  <ITEMS>
+    <ITEM>
+      <ITEM_INDEX>0</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 07:35:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Jersey Ave -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>3711</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS>All Aboard</STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>11-Dec-2018 07:24:53 AM</LAST_MODIFIED>
+      <BACKCOLOR>red</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <GPSLATITUDE>40.750562</GPSLATITUDE>
+      <GPSLONGITUDE>-73.993471</GPSLONGITUDE>
+      <GPSTIME>11-Dec-2018 07:18:39 AM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NEC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 07:35:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 07:43:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 07:51:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Elizabeth</NAME>
+          <TIME>11-Dec-2018 07:59:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Linden</NAME>
+          <TIME>11-Dec-2018 08:05:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 08:09:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 08:14:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metuchen</NAME>
+          <TIME>11-Dec-2018 08:19:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Edison</NAME>
+          <TIME>11-Dec-2018 08:24:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Brunswick</NAME>
+          <TIME>11-Dec-2018 08:28:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Jersey Ave.</NAME>
+          <TIME>11-Dec-2018 08:45:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>1</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 07:40:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>MSU -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>MontClair-Boonton Line</LINE>
+      <TRAIN_ID>6215</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>11-Dec-2018 07:21:49 AM</LAST_MODIFIED>
+      <BACKCOLOR>brown</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <GPSLATITUDE>40.750562</GPSLATITUDE>
+      <GPSLONGITUDE>-73.993471</GPSLONGITUDE>
+      <GPSTIME>11-Dec-2018 07:21:26 AM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MNBTN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 07:40:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 07:48:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>11-Dec-2018 07:57:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bloomfield</NAME>
+          <TIME>11-Dec-2018 08:04:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bay Street</NAME>
+          <TIME>11-Dec-2018 08:08:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Montclair Hts.</NAME>
+          <TIME>11-Dec-2018 08:15:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>MSU</NAME>
+          <TIME>11-Dec-2018 08:20:00 AM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>2</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 07:44:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Long Branch -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>North Jersey Coast Line</LINE>
+      <TRAIN_ID>3223</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>4323</CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:20:58 AM</LAST_MODIFIED>
+      <BACKCOLOR>CornflowerBlue</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NJCL</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 07:44:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 07:52:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:00:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 08:07:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>North Elizab.</NAME>
+          <TIME>11-Dec-2018 08:10:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Elizabeth</NAME>
+          <TIME>11-Dec-2018 08:13:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Linden</NAME>
+          <TIME>11-Dec-2018 08:18:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 08:22:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Woodbridge</NAME>
+          <TIME>11-Dec-2018 08:29:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Perth Amboy</NAME>
+          <TIME>11-Dec-2018 08:36:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Amboy</NAME>
+          <TIME>11-Dec-2018 08:40:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Matawan</NAME>
+          <TIME>11-Dec-2018 08:49:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hazlet</NAME>
+          <TIME>11-Dec-2018 08:52:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Middletown NJ</NAME>
+          <TIME>11-Dec-2018 08:59:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Red Bank</NAME>
+          <TIME>11-Dec-2018 09:04:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Little Silver</NAME>
+          <TIME>11-Dec-2018 09:08:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Long Branch</NAME>
+          <TIME>11-Dec-2018 09:23:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Elberon</NAME>
+          <TIME>11-Dec-2018 09:30:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Allenhurst</NAME>
+          <TIME>11-Dec-2018 09:34:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Asbury Park</NAME>
+          <TIME>11-Dec-2018 09:37:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bradley Beach</NAME>
+          <TIME>11-Dec-2018 09:40:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Belmar</NAME>
+          <TIME>11-Dec-2018 09:44:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Spring Lake</NAME>
+          <TIME>11-Dec-2018 09:48:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Manasquan</NAME>
+          <TIME>11-Dec-2018 09:52:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Point Pleasant</NAME>
+          <TIME>11-Dec-2018 09:58:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bay Head</NAME>
+          <TIME>11-Dec-2018 10:07:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>3</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 07:49:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Dover -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6611</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:18:50 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 07:49:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 07:58:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>11-Dec-2018 08:07:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>11-Dec-2018 08:13:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>11-Dec-2018 08:16:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>11-Dec-2018 08:21:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>11-Dec-2018 08:24:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>11-Dec-2018 08:28:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>11-Dec-2018 08:31:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>11-Dec-2018 08:36:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>11-Dec-2018 08:42:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>11-Dec-2018 08:46:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>11-Dec-2018 08:50:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>11-Dec-2018 08:54:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>11-Dec-2018 08:59:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>11-Dec-2018 09:07:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>11-Dec-2018 09:17:00 AM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>4</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 07:53:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Trenton -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>3823</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:27:19 AM</LAST_MODIFIED>
+      <BACKCOLOR>red</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NEC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 07:53:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:02:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:09:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 08:15:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 08:26:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 08:33:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metuchen</NAME>
+          <TIME>11-Dec-2018 08:38:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Edison</NAME>
+          <TIME>11-Dec-2018 08:43:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Brunswick</NAME>
+          <TIME>11-Dec-2018 08:47:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Jersey Ave.</NAME>
+          <TIME>11-Dec-2018 08:54:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Princeton Jct.</NAME>
+          <TIME>11-Dec-2018 09:07:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hamilton</NAME>
+          <TIME>11-Dec-2018 09:13:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Trenton</NAME>
+          <TIME>11-Dec-2018 09:24:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>5</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:00:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Washington</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>ACELA EXPRESS</LINE>
+      <TRAIN_ID>A2109</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS>in 30 Min</STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>11-Dec-2018 07:28:14 AM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>11-Dec-2018 07:27:47 AM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>AMTK</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:00:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:15:00 AM</TIME>
+          <PICKUP>Pick Up Only</PICKUP>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 08:28:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Philadelphia</NAME>
+          <TIME>11-Dec-2018 09:12:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wilmington</NAME>
+          <TIME>11-Dec-2018 09:42:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Baltimore</NAME>
+          <TIME>11-Dec-2018 09:42:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Washington</NAME>
+          <TIME />
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>6</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:02:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Dover -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6613</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:32:18 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:02:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:11:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>11-Dec-2018 08:19:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>East Orange</NAME>
+          <TIME>11-Dec-2018 08:25:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>11-Dec-2018 08:27:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>11-Dec-2018 08:30:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Highland Ave.</NAME>
+          <TIME>11-Dec-2018 08:33:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Stn</NAME>
+          <TIME>11-Dec-2018 08:35:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>11-Dec-2018 08:38:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>11-Dec-2018 08:41:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>11-Dec-2018 08:45:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>11-Dec-2018 08:49:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>11-Dec-2018 08:54:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>11-Dec-2018 09:00:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>11-Dec-2018 09:04:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>11-Dec-2018 09:09:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>11-Dec-2018 09:13:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>11-Dec-2018 09:18:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>11-Dec-2018 09:26:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>11-Dec-2018 09:35:00 AM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>7</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:05:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Jersey Ave -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>3713</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:10:09 AM</LAST_MODIFIED>
+      <BACKCOLOR>red</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NEC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:05:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:13:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:21:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 08:28:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>North Elizab.</NAME>
+          <TIME>11-Dec-2018 08:32:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Elizabeth</NAME>
+          <TIME>11-Dec-2018 08:34:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Linden</NAME>
+          <TIME>11-Dec-2018 08:40:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 08:43:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 08:50:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Brunswick</NAME>
+          <TIME>11-Dec-2018 08:59:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Jersey Ave.</NAME>
+          <TIME>11-Dec-2018 09:06:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>8</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:10:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Washington &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>REGIONAL</LINE>
+      <TRAIN_ID>A185</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>11-Dec-2018 07:26:13 AM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>11-Dec-2018 07:25:57 AM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>AMTK</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:10:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:27:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 08:32:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 08:45:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Trenton</NAME>
+          <TIME>11-Dec-2018 09:10:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Philadelphia</NAME>
+          <TIME>11-Dec-2018 09:37:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wilmington</NAME>
+          <TIME>11-Dec-2018 10:07:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Baltimore</NAME>
+          <TIME>11-Dec-2018 10:07:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>BWI Airport</NAME>
+          <TIME>11-Dec-2018 10:07:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Carrollton</NAME>
+          <TIME>11-Dec-2018 10:07:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Washington</NAME>
+          <TIME>11-Dec-2018 11:30:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>9</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:12:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Trenton -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>3825</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:44:58 AM</LAST_MODIFIED>
+      <BACKCOLOR>red</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NEC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:12:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:20:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:28:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 08:35:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Elizabeth</NAME>
+          <TIME>11-Dec-2018 08:40:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Linden</NAME>
+          <TIME>11-Dec-2018 08:45:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 08:49:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 08:56:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metuchen</NAME>
+          <TIME>11-Dec-2018 09:01:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Edison</NAME>
+          <TIME>11-Dec-2018 09:06:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Brunswick</NAME>
+          <TIME>11-Dec-2018 09:10:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Princeton Jct.</NAME>
+          <TIME>11-Dec-2018 09:25:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hamilton</NAME>
+          <TIME>11-Dec-2018 09:32:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Trenton</NAME>
+          <TIME>11-Dec-2018 09:45:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>10</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:14:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>MSU -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>MontClair-Boonton Line</LINE>
+      <TRAIN_ID>6219</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:16:08 AM</LAST_MODIFIED>
+      <BACKCOLOR>brown</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MNBTN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:14:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:23:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>11-Dec-2018 08:31:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Watsessing Ave</NAME>
+          <TIME>11-Dec-2018 08:38:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bloomfield</NAME>
+          <TIME>11-Dec-2018 08:40:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Ridge</NAME>
+          <TIME>11-Dec-2018 08:43:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bay Street</NAME>
+          <TIME>11-Dec-2018 08:46:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Walnut Street</NAME>
+          <TIME>11-Dec-2018 08:49:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Watchung Ave.</NAME>
+          <TIME>11-Dec-2018 08:52:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Upp. Montclair</NAME>
+          <TIME>11-Dec-2018 08:54:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mountain Ave</NAME>
+          <TIME>11-Dec-2018 08:57:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Montclair Hts.</NAME>
+          <TIME>11-Dec-2018 08:59:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>MSU</NAME>
+          <TIME>11-Dec-2018 09:06:00 AM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>11</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:24:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Summit -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6315</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:16:21 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:24:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:33:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>11-Dec-2018 08:42:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Brick Church</NAME>
+          <TIME>11-Dec-2018 08:48:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Orange</NAME>
+          <TIME>11-Dec-2018 08:51:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>11-Dec-2018 08:56:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>11-Dec-2018 09:00:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>11-Dec-2018 09:04:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Short Hills</NAME>
+          <TIME>11-Dec-2018 09:08:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>11-Dec-2018 09:15:00 AM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>12</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:28:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Trenton -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>3827</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:59:57 AM</LAST_MODIFIED>
+      <BACKCOLOR>red</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NEC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:28:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:37:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:44:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 08:51:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>North Elizab.</NAME>
+          <TIME>11-Dec-2018 08:54:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Elizabeth</NAME>
+          <TIME>11-Dec-2018 08:57:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Linden</NAME>
+          <TIME>11-Dec-2018 09:02:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 09:06:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 09:12:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metuchen</NAME>
+          <TIME>11-Dec-2018 09:16:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Edison</NAME>
+          <TIME>11-Dec-2018 09:21:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Brunswick</NAME>
+          <TIME>11-Dec-2018 09:25:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Princeton Jct.</NAME>
+          <TIME>11-Dec-2018 09:46:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hamilton</NAME>
+          <TIME>11-Dec-2018 09:53:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Trenton</NAME>
+          <TIME>11-Dec-2018 10:03:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>13</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:39:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Trenton -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>3915</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 10:09:07 AM</LAST_MODIFIED>
+      <BACKCOLOR>red</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NEC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:39:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:47:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 08:55:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 09:02:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 09:13:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metropark</NAME>
+          <TIME>11-Dec-2018 09:18:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Metuchen</NAME>
+          <TIME>11-Dec-2018 09:23:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Edison</NAME>
+          <TIME>11-Dec-2018 09:28:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Brunswick</NAME>
+          <TIME>11-Dec-2018 09:32:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Princeton Jct.</NAME>
+          <TIME>11-Dec-2018 09:52:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hamilton</NAME>
+          <TIME>11-Dec-2018 09:59:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Trenton</NAME>
+          <TIME>11-Dec-2018 10:09:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>14</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:42:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Dover -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Morris &amp; Essex Line</LINE>
+      <TRAIN_ID>6617</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 10:09:49 AM</LAST_MODIFIED>
+      <BACKCOLOR>green</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>M&amp;E</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:42:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:50:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>11-Dec-2018 09:00:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Orange</NAME>
+          <TIME>11-Dec-2018 09:10:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Maplewood</NAME>
+          <TIME>11-Dec-2018 09:13:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Millburn</NAME>
+          <TIME>11-Dec-2018 09:17:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Summit</NAME>
+          <TIME>11-Dec-2018 09:26:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Chatham</NAME>
+          <TIME>11-Dec-2018 09:32:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Madison</NAME>
+          <TIME>11-Dec-2018 09:36:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Convent Stn</NAME>
+          <TIME>11-Dec-2018 09:41:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morristown</NAME>
+          <TIME>11-Dec-2018 09:45:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Morris Plains</NAME>
+          <TIME>11-Dec-2018 09:50:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Denville</NAME>
+          <TIME>11-Dec-2018 09:58:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Dover</NAME>
+          <TIME>11-Dec-2018 10:07:00 AM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>15</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 08:45:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Long Branch -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>North Jersey Coast Line</LINE>
+      <TRAIN_ID>3227</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 10:32:28 AM</LAST_MODIFIED>
+      <BACKCOLOR>CornflowerBlue</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NJCL</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 08:45:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 08:53:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 09:01:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 09:08:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Elizabeth</NAME>
+          <TIME>11-Dec-2018 09:13:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Linden</NAME>
+          <TIME>11-Dec-2018 09:18:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rahway</NAME>
+          <TIME>11-Dec-2018 09:22:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Woodbridge</NAME>
+          <TIME>11-Dec-2018 09:28:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Perth Amboy</NAME>
+          <TIME>11-Dec-2018 09:34:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>South Amboy</NAME>
+          <TIME>11-Dec-2018 09:39:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Matawan</NAME>
+          <TIME>11-Dec-2018 09:47:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hazlet</NAME>
+          <TIME>11-Dec-2018 09:51:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Middletown NJ</NAME>
+          <TIME>11-Dec-2018 09:57:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Red Bank</NAME>
+          <TIME>11-Dec-2018 10:03:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Little Silver</NAME>
+          <TIME>11-Dec-2018 10:07:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Long Branch</NAME>
+          <TIME>11-Dec-2018 10:23:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>16</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 09:00:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>BWI Airport</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>A2151</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 09:57:44 AM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>AMTK</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 09:00:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 09:15:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Philadelphia</NAME>
+          <TIME>11-Dec-2018 10:10:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wilmington</NAME>
+          <TIME>11-Dec-2018 10:29:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Baltimore</NAME>
+          <TIME>11-Dec-2018 11:13:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>BWI Airport</NAME>
+          <TIME>11-Dec-2018 11:26:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>17</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 09:04:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>Trenton -SEC &amp;#9992</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>Northeast Corridor Line</LINE>
+      <TRAIN_ID>3917</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 10:25:30 AM</LAST_MODIFIED>
+      <BACKCOLOR>red</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>NEC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 09:04:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 09:12:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Penn</NAME>
+          <TIME>11-Dec-2018 09:20:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Airport</NAME>
+          <TIME>11-Dec-2018 09:26:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Brunswick</NAME>
+          <TIME>11-Dec-2018 09:47:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Princeton Jct.</NAME>
+          <TIME>11-Dec-2018 10:02:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hamilton</NAME>
+          <TIME>11-Dec-2018 10:09:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Trenton</NAME>
+          <TIME>11-Dec-2018 10:19:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>18</ITEM_INDEX>
+      <SCHED_DEP_DATE>11-Dec-2018 09:09:00 AM</SCHED_DEP_DATE>
+      <DESTINATION>MSU -SEC</DESTINATION>
+      <TRACK>
+      </TRACK>
+      <LINE>MontClair-Boonton Line</LINE>
+      <TRAIN_ID>6227</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>10-Dec-2018 10:02:48 AM</LAST_MODIFIED>
+      <BACKCOLOR>brown</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MNBTN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>New York</NAME>
+          <TIME>11-Dec-2018 09:09:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus </NAME>
+          <TIME>11-Dec-2018 09:17:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>11-Dec-2018 09:26:15 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Watsessing Ave</NAME>
+          <TIME>11-Dec-2018 09:32:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bloomfield</NAME>
+          <TIME>11-Dec-2018 09:34:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Ridge</NAME>
+          <TIME>11-Dec-2018 09:36:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bay Street</NAME>
+          <TIME>11-Dec-2018 09:39:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Walnut Street</NAME>
+          <TIME>11-Dec-2018 09:42:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Watchung Ave.</NAME>
+          <TIME>11-Dec-2018 09:45:00 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Upp. Montclair</NAME>
+          <TIME>11-Dec-2018 09:47:45 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Montclair Hts.</NAME>
+          <TIME>11-Dec-2018 09:50:30 AM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>MSU</NAME>
+          <TIME>11-Dec-2018 09:54:30 AM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+  </ITEMS>
+</STATION>
