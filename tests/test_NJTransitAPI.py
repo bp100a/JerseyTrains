@@ -1,6 +1,8 @@
 #!/usr/bin/python
+"""test for NJTransit API"""
 from unittest import TestCase
 import os
+import xml.etree.ElementTree as ET
 from http import HTTPStatus
 import responses
 from njtransit.api import NJTransitAPI
@@ -8,7 +10,7 @@ from configuration import config
 
 
 class TestNJTransitAPI(TestCase):
-
+    """encapsulates our NJTransit API tests"""
     @staticmethod
     def create_tst_object() -> NJTransitAPI:
         """create the NJTransit object with sign-in"""
@@ -19,6 +21,7 @@ class TestNJTransitAPI(TestCase):
 
     @staticmethod
     def read_test_data(filename: str) -> bytes:
+        """read our canned XML test data"""
         cwd = os.getcwd().replace('\\', '/')
         root = cwd.split('/tests')[0]
         path = root + '/tests/data/'
@@ -29,6 +32,7 @@ class TestNJTransitAPI(TestCase):
         return data
 
     def test_username(self):
+        """test that we can set the username"""
         njt = NJTransitAPI()
         assert njt.username
 
@@ -37,6 +41,7 @@ class TestNJTransitAPI(TestCase):
         assert njt.apikey
 
     def test_apikey(self):
+        """test that we can set the API key/password"""
         njt = NJTransitAPI()
         assert njt.apikey
 
@@ -91,8 +96,11 @@ class TestNJTransitAPI(TestCase):
         test_bytes = b'bogus data to trip up parser'
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
-        station_list = njt._NJTransitAPI__fetch_train_stations()
-        assert not station_list
+        try:
+            njt._NJTransitAPI__fetch_train_stations()
+            assert False
+        except ET.ParseError:
+            pass
 
     @responses.activate
     def test_train_schedule(self):
@@ -137,8 +145,11 @@ class TestNJTransitAPI(TestCase):
         test_bytes = b'bogus data to trip up parser'
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
-        train_list = njt.train_schedule(station_abbreviation='CM')
-        assert not train_list
+        try:
+            njt.train_schedule(station_abbreviation='CM')
+            assert False
+        except ET.ParseError:
+            pass
 
     @responses.activate
     def test_station_schedule(self):
@@ -178,8 +189,11 @@ class TestNJTransitAPI(TestCase):
         test_bytes = b'bogus data to trip up parser'
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
-        train_list = njt.station_schedule(station_abbreviation='CM')
-        assert not train_list
+        try:
+            njt.station_schedule(station_abbreviation='CM')
+            assert False
+        except ET.ParseError:
+            pass
 
     @responses.activate
     def test_station_stops(self):
@@ -218,8 +232,11 @@ class TestNJTransitAPI(TestCase):
         test_bytes = b'bogus data to trip up parser'
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
-        stop_list = njt.train_stops(train_id='6919')  # train_id doesn't matter since pre-canned
-        assert not stop_list
+        try:
+            njt.train_stops(train_id='6919')  # train_id doesn't matter since pre-canned
+            assert False
+        except ET.ParseError:
+            pass
 
     @responses.activate
     def test_find_end_to_end(self):

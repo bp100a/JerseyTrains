@@ -1,0 +1,190 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+      - image: circleci/python:3.6.1
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: upgrade pip
+          command: |
+            . venv/bin/activate
+            pip install --upgrade pip
+
+      - run:
+          name: CodeCov support
+          command: |
+            . venv/bin/activate
+            pip install codecov
+
+      - run:
+          name: install dependencies
+          command: |
+            . venv/bin/activate
+            pip install -r requirements.txt
+            pip install nose
+            pip install --quiet pylint
+            pip install --quiet nosexcover
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+
+      # run tests!
+      # run nose for coverage
+      # run pylint for code quality
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            mkdir test-reports
+            nosetests --with-xcoverage --with-xunit --cover-package=models --cover-package=controllers --cover-package=lambda_function.py --cover-erase --cover-branches --xcoverage-file=test-reports/coverage.xml --xunit-file=test-reports/nosetests.xml
+            # mv .coverage test-reports/.coverage
+
+            # PyLint returns
+            # 0 if everything went fine
+            # 1 if some fatal message issued
+            # 2 if some error message issued
+            # 4 if some warning message issued
+            # 8 if some refactor message issued
+            # 16 if some convention message issued
+            # 32 on usage error
+            #     status 1 to 16 will be bit-ORed so you can know which different
+            #
+            #  categories has been issued by analysing pylint output status code
+            #  we can't control the error status out of PyLint, log everything 1st time
+            #  the 2nd run only looks for errors and doesn't log, but any errors will stop build
+            pylint --exit-zero -f parseable controllers models lambda_function.py > test-reports/pylint.out
+            pylint --errors-only -f parseable controllers models lambda_function.py
+            codecov --token=$CODECOV_TOKEN
+
+      - store_artifacts:
+          path: test-reports/
+
+      - store_test_results:
+          path: test-reports/
+  deploy:
+    docker:
+      - image: circleci/python:3.6.1
+    working_directory: ~/repo
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install --upgrade pip
+            pip install -r requirements.txt
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+      - run:
+          name: create config.py
+          command: sh ./config.sh
+      - run:
+          name: create lambda image
+          command: |
+            mkdir lambda_deploy
+            cp -r ./venv/lib/python3.6/site-packages/* ./lambda_deploy
+            cp -v -r controllers lambda_deploy
+            cp -v -r models lambda_deploy
+            cp *.py lambda_deploy
+      - run:
+          name: remove unnecessary modules
+          command: |
+            rm -r lambda_deploy/pylint*
+            rm -r lambda_deploy/pip*
+            rm -r lambda_deploy/nose*
+            rm -r lambda_deploy/python_lambda_local*.egg-info
+            rm -r lambda_deploy/waitress*
+            rm -r lambda_deploy/fakeredis*
+            rm -r lambda_deploy/coverage*
+            rm -r lambda_deploy/codecov*
+            rm -r lambda_deploy/requests_mock*
+            rm lambda_deploy/*.so
+            rm -r lambda_deploy/__pycache__
+            rm -r lambda_deploy/docutils*
+            rm -r lambda_deploy/astroid*
+            rm -r lambda_deploy/boto*
+            rm -r lambda_deploy/s3transfer*
+            rm -r lambda_deploy/typed_ast*
+            rm -r lambda_deploy/mccabe*
+            rm lambda_deploy/easy_install*
+            rm -r lambda_deploy/six*
+      - run:
+          name: zip up the package
+          command: |
+            cd lambda_deploy
+            zip -r ../TapList.zip *
+      - run:
+          name: Install AWS client
+          command: sudo pip install awscli
+      - run:
+          name: upload the package
+          command: aws lambda update-function-code --function-name JerseyTrains --region us-east-1 --zip-file fileb://JerseyTrains.zip
+      - run:
+          name: stash zipfile as an artifact in case we need to check things
+          command: |
+            mkdir zipfile
+            mv JerseyTrains.zip zipfile/JerseyTrains.zip
+      - run:
+          name: publish version
+          command: aws lambda publish-version --function-name JerseyTrains --description $CIRCLE_BUILD_NUM --region us-east-1
+      - run:
+          name: update STAGE alias
+          command: bash ./deploy/update-alias.sh $CIRCLE_BUILD_NUM STAGE
+      - run:
+          name: Validate build
+          command: bash ./deploy/validate-build.sh
+      - run:
+          name: Push to PROD
+          command: bash ./deploy/update-alias.sh $CIRCLE_BUILD_NUM PROD
+
+      - store_artifacts:
+          path: zipfile/
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+

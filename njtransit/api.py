@@ -141,8 +141,8 @@ class NJTransitAPI:
 
         except requests.RequestException as err:
             print(err.__str__())
-        except ET.ParseError as perr:
-            print(perr.__str__())
+        except ET.ParseError:
+            raise
 
         return []
 
@@ -170,7 +170,7 @@ class NJTransitAPI:
         except requests.RequestException as err:
             print(err.__str__())
         except ET.ParseError as perr:
-            print(perr.__str__())
+            raise
 
         return None
 
@@ -200,8 +200,8 @@ class NJTransitAPI:
                 return {train_id: new_stop_list}
         except requests.RequestException as err:
             print(err.__str__())
-        except ET.ParseError as perr:
-            print(perr.__str__())
+        except ET.ParseError:
+            raise
 
         return {}
 
@@ -260,7 +260,7 @@ class NJTransitAPI:
 
         except requests.RequestException as err:
             print(err.__str__())
-        except ET.ParseError as perr:
-            print(perr.__str__())
+        except ET.ParseError:
+            raise
 
         return {}
