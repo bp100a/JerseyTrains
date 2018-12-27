@@ -30,6 +30,7 @@ jobs:
       - run:
           name: upgrade pip
           command: |
+            python3 -m venv venv
             . venv/bin/activate
             pip install --upgrade pip
 
@@ -148,7 +149,7 @@ jobs:
           name: zip up the package
           command: |
             cd lambda_deploy
-            zip -r ../TapList.zip *
+            zip -r ../JerseyTrains.zip *
       - run:
           name: Install AWS client
           command: sudo pip install awscli
