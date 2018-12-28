@@ -48,7 +48,9 @@ jobs:
             pip install nose
             pip install --quiet pylint
             pip install --quiet nosexcover
-
+      - run:
+          name: create config.py
+          command: sh ./config.sh
       - save_cache:
           paths:
             - ./venv
@@ -107,9 +109,6 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
-      - run:
-          name: create config.py
-          command: sh ./config.sh
       - save_cache:
           paths:
             - ./venv
