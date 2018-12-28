@@ -12,7 +12,7 @@ from configuration import config
 class TestTrainScheduler(TestCase):
 
     @staticmethod
-    def read_test_data(filename: str) -> bytes:
+    def read_data(filename: str) -> bytes:
         cwd = os.getcwd().replace('\\', '/')
         root = cwd.split('/tests')[0]
         path = root + '/tests/data/'
@@ -26,7 +26,7 @@ class TestTrainScheduler(TestCase):
         """verify we can find station name in the name list"""
         # mock the request
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestTrainScheduler.read_test_data('train_stations.xml')
+        test_bytes = TestTrainScheduler.read_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         scheduler = train_scheduler.TrainSchedule()
@@ -42,7 +42,7 @@ class TestTrainScheduler(TestCase):
         arguments = dict(parse.parse_qsl(request.body))
         mapping = {'Chatham': 'CM', 'New York': 'NY', 'CM': 'CM', 'NY': 'NY'}
         station_abbreviation = mapping[arguments['station']]
-        data = TestTrainScheduler.read_test_data('{0}_train_schedule.xml'.format(station_abbreviation))
+        data = TestTrainScheduler.read_data('{0}_train_schedule.xml'.format(station_abbreviation))
         return HTTPStatus.CREATED, {'content-type': 'text/xml'}, data
 
     @responses.activate
@@ -51,7 +51,7 @@ class TestTrainScheduler(TestCase):
         api twice, we use a callback to provide the proper canned
         responses"""
         url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
-        test_bytes = TestTrainScheduler.read_test_data('train_stations.xml')
+        test_bytes = TestTrainScheduler.read_data('train_stations.xml')
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
