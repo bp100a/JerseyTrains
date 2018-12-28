@@ -34,6 +34,11 @@ class TestRedis(TestCase):
         cloudredis.initialize_cloud_redis(injected_server=None)
         assert cloudredis.REDIS_SERVER
 
+    def test_redis_initialize_subsequent(self):
+        cloudredis.REDIS_SERVER = 'foobar'
+        cloudredis.initialize_cloud_redis(injected_server=None)
+        assert cloudredis.REDIS_SERVER == 'foobar'
+
     def test_redis_cache_station_list(self):
         fake = fakeredis.FakeStrictRedis()
         cloudredis.initialize_cloud_redis(injected_server=fake)

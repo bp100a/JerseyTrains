@@ -19,6 +19,20 @@ class TestLogging(TestCase):
         assert setuplogging.AWS_LOGGER is None
         assert setuplogging.LOGGING_HANDLER == setuplogging.mock_logging_handler
 
+    def test_setup_logging_mocked_subsequent(self):
+        setuplogging.AWS_LOGGER = None
+        setuplogging.LOGGING_HANDLER = None
+
+        setuplogging.initialize_logging(mocking=True)
+        assert setuplogging.AWS_LOGGER is None
+        assert setuplogging.LOGGING_HANDLER == setuplogging.mock_logging_handler
+
+        # now do it again, this time without mocking
+        setuplogging.initialize_logging(mocking=False)
+        assert setuplogging.AWS_LOGGER is None
+        assert setuplogging.LOGGING_HANDLER == setuplogging.mock_logging_handler
+
+
     def test_setup_logging_prod(self):
         setuplogging.AWS_LOGGER = None
         setuplogging.LOGGING_HANDLER = None
