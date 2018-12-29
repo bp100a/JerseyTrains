@@ -1,8 +1,9 @@
 """testing for the AWS lambda function interface"""
 import os
 import lambda_function
+import fakeredis
 from tests.setupmocking import TestwithMocking
-
+from models import cloudredis
 
 class TestAWSlambda(TestwithMocking):
 
@@ -60,6 +61,18 @@ class TestAWSlambda(TestwithMocking):
         assert response is None
 
     def test_end_session(self):
-        event_end_session = {"session": {"new": False}, "request" : {"type": "SessionEndRequest"}}
+        event_end_session = {"session": {"new": False}, "request" : {"type": "SessionEndedRequest"}}
         response = lambda_function.lambda_handler(event=event_end_session, context=None)
         assert response is None
+
+    def test_unknown_intent_no_redis(self):
+        get_unknown = {"request" : {"type": "IntentRequest", "intent":\
+                                    {"name": "JerseyTrains.UNKNOWN_INTENT", "mocked": True}},\
+                       "session": {"new": False}}
+        cloudredis.REDIS_SERVER = None
+        response = lambda_function.on_intent(request=get_unknown['request'],
+                                             session=get_unknown['session'],
+                                             fake_redis=fakeredis.FakeStrictRedis())
+        assert not response['response']['shouldEndSession']
+        assert response['response']['outputSpeech']['text'] == lambda_function.HELP_MESSAGE
+        assert cloudredis.REDIS_SERVER

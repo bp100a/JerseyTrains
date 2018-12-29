@@ -11,7 +11,7 @@ STOP_MESSAGE = "Goodbye!"
 FALLBACK_MESSAGE = "The Jersey Trains skill can help you find New Jersey Transit trains " +\
                     " to your desired destination"
 FALLBACK_REPROMPT = 'What can I help you with?'
-HOME_STATION_SET = 'Your home station has been set to{0}'
+HOME_STATION_SET = 'Your home station has been set to {0}'
 CANNOT_SET_HOME = 'Sorry, I cannot set {0} as your home station'
 NO_HOME_STATION_SET = 'Sorry, no home station has been set. You can set your home station' + \
                       'by saying ask Jersey Trains to set my home station to a station name'
@@ -37,17 +37,18 @@ def lambda_handler(event, context):
 
     return None
 
+
 # --------------- Response handlers -----------------
 
 
-def on_intent(request, session):
+def on_intent(request, session, fake_redis=None):
     """ called on receipt of an Intent  """
 
     intent_name = request['intent']['name']
 
     # initialize our redis server if needed
     if cloudredis.REDIS_SERVER is None:
-        cloudredis.initialize_cloud_redis(injected_server=None)
+        cloudredis.initialize_cloud_redis(injected_server=fake_redis)
 
     # process the intents
 
