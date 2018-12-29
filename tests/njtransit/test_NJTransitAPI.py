@@ -63,6 +63,20 @@ class TestNJTransitAPI(TestCase):
         assert len(station_list) == 174*2  # each station in by name & by abbreviation
 
     @responses.activate
+    def test_train_stations_property_exception(self):
+        njt = TestNJTransitAPI.create_tst_object()
+
+        # mock the request
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        test_bytes = RequestException()
+        responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
+
+        try:
+            station_list = njt.train_stations
+        except RequestException:
+            pass
+
+    @responses.activate
     def test_station_list(self):
         njt = TestNJTransitAPI.create_tst_object()
 
@@ -210,6 +224,21 @@ class TestNJTransitAPI(TestCase):
         assert len(stops) == 20
         assert 'New York' in stops[0]
         assert 'Chatham' in stops[12]
+
+    @responses.activate
+    def test_station_stops_request_exception(self):
+        njt = TestNJTransitAPI.create_tst_object()
+
+        # get the trains for Chatham station from our canned data
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainStopListJSON"
+        test_bytes = RequestException()
+        responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
+
+        try:
+            njt.train_stops(train_id='6919')  # train_id doesn't matter since pre-canned
+            assert False
+        except RequestException:
+            pass
 
     @responses.activate
     def test_station_stops_404(self):

@@ -199,7 +199,7 @@ class NJTransitAPI:
 
                 return {train_id: new_stop_list}
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError:
             raise
 
@@ -259,7 +259,7 @@ class NJTransitAPI:
                 return station_stops
 
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError:
             raise
 
