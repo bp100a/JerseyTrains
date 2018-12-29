@@ -140,7 +140,7 @@ class NJTransitAPI:
                 return NJTransitAPI.parse_train_schedule(root)
 
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError:
             raise
 
@@ -168,7 +168,7 @@ class NJTransitAPI:
                 return NJTransitAPI.parse_station_schedule(root)
 
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError as perr:
             raise
 

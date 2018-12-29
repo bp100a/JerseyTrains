@@ -167,7 +167,7 @@ class TrainSchedule:
                 else:
                     possible_indirect_trains.append(train)
         except KeyError as dict_key_error:
-            print(dict_key_error.__str__())
+            raise
 
         # okay we have our direct routes, now we need to
         # look for indirect routes. We created a list

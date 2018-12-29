@@ -7,7 +7,7 @@ from http import HTTPStatus
 import responses
 from njtransit.api import NJTransitAPI
 from configuration import config
-
+from requests import RequestException
 
 class TestNJTransitAPI(TestCase):
     """encapsulates our NJTransit API tests"""
@@ -236,6 +236,36 @@ class TestNJTransitAPI(TestCase):
             njt.train_stops(train_id='6919')  # train_id doesn't matter since pre-canned
             assert False
         except ET.ParseError:
+            pass
+
+    @responses.activate
+    def test_station_stops_request_error(self):
+        njt = TestNJTransitAPI.create_tst_object()
+
+        # get the trains for Chatham station from our canned data
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationScheduleXML"
+        exception = RequestException()
+        responses.add(responses.POST, url, body=exception, status=HTTPStatus.NOT_FOUND)
+
+        try:
+            train_list = njt.station_schedule(station_abbreviation='CM')
+            assert False
+        except RequestException:
+            pass
+
+    @responses.activate
+    def test_train_schedule_request_error(self):
+        njt = TestNJTransitAPI.create_tst_object()
+
+        # get the trains for Chatham station from our canned data
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getTrainScheduleXML"
+        exception = RequestException()
+        responses.add(responses.POST, url, body=exception, status=HTTPStatus.NOT_FOUND)
+
+        try:
+            train_list = njt.train_schedule(station_abbreviation='CM')
+            assert False
+        except RequestException:
             pass
 
     @responses.activate
