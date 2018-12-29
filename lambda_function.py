@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-""" Jersey Beers Alexa Skill! Returns the tap list for your favorite brewery """
+""" Jersey Trains Alexa Skill! Returns the NJTransit train information """
 # pylint: disable-msg=R0911, W0401, R1705, W0613
 from models import cloudredis, setuplogging
 
