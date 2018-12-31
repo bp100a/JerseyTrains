@@ -144,6 +144,7 @@ jobs:
             rm -r lambda_deploy/six*
             rm lambda_deploy/responses.py
             rm lambda_deploy/test_responses.py
+            rm -r lambda_deploy/*.pyc
       - run:
           name: zip up the package
           command: |
