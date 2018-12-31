@@ -19,7 +19,27 @@ fi
 
 
 # Lookup the Lambda version provided by AWS by looking at the build_number in the description
-lambda_version=$(aws lambda list-versions-by-function --function-name $lambda_name --region $aws_region --output json| jq -r ".Versions[] | select(.Version!=\"\$LATEST\") | select(.Description == \"${build_number}\").Version")
+# lambda_version=$(aws lambda list-versions-by-function --function-name $lambda_name --region $aws_region --output json| jq -r ".Versions[] | select(.Version!=\"\$LATEST\") | select(.Description == \"${build_number}\").Version")
+aws lambda list-versions-by-function --function-name $lambda_name --region $aws_region --output json > list.json
+lambda_version=$(cat list.json | jq -r ".Versions[] | select(.Version!=\"\$LATEST\") | select(.Description == \"${build_number}\").Version")
+next_marker=$(cat list.json | jq -r ".NextMarker")
+
+while ["$lambda_version" == ""]
+do
+   aws lambda list-versions-by-function --function-name $lambda_name --region $aws_region --marker $next_marker --output json > list.json
+   lambda_version=$(cat list.json | jq -r ".Versions[] | select(.Version!=\"\$LATEST\") | select(.Description == \"${build_number}\").Version")
+   next_marker=$(cat list.json | jq -r ".NextMarker")
+   echo "lambda_version=$lambda_version, next marker= $next_marker"
+
+   if [ ! -z "$lambda_version" ]; then
+      break
+   fi
+   if [ -z "$next_marker" ]; then
+      echo "exit, no more pages"
+      exit 1
+   fi
+done
+
 echo "Found matching Lambda version $lambda_version for build number $build_number"
 
 # Fetch existing aliases
@@ -31,6 +51,7 @@ if [[ $existing_aliases == *"\"$alias\""* ]]
 then
     # Update existing alias to point to the Lambda version
    echo "Updating alias $alias for Lambda $lambda_name"
+   echo "lambda_version: $lambda_version"
    aws lambda update-alias --function-name $lambda_name --name $alias --function-version $lambda_version --description $build_number --region $aws_region
 else
    # Create a new alias for the Lambda version
