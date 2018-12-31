@@ -2,7 +2,7 @@
 """ Jersey Trains Alexa Skill! Returns the NJTransit train information """
 # pylint: disable-msg=R0911, W0401, R1705, W0613
 from models import cloudredis, setuplogging
-from controllers.train_scheduler import ScheduleUser
+from controllers import train_scheduler
 
 SKILL_NAME = "Jersey Trains"
 HELP_MESSAGE = "I can help you find a New Jersey Transit train to your desired destination"
@@ -45,7 +45,7 @@ def set_home_station(request: dict, session: dict):
     try:
         station = request['intent']['slots']['station']['value']
         aws_user_id = session['user']['userId']
-        success = ScheduleUser.set_home_station(station=station,
+        success = train_scheduler.ScheduleUser.set_home_station(station=station,
                                                 user_id=aws_user_id)
         if success:
             return response(speech_response(HOME_STATION_SET.format(station), True))
@@ -62,7 +62,7 @@ def get_home_station(request: dict, session: dict):
     """get the home station for the user"""
 
     aws_user_id = session['user']['userId']
-    station = ScheduleUser.get_home_station(user_id=aws_user_id)
+    station = train_scheduler.ScheduleUser.get_home_station(user_id=aws_user_id)
     if not station: # didn't find a home
         return response(speech_response(NO_HOME_STATION_SET, True))
 
