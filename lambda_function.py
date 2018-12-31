@@ -2,7 +2,7 @@
 """ Jersey Trains Alexa Skill! Returns the NJTransit train information """
 # pylint: disable-msg=R0911, W0401, R1705, W0613
 from models import cloudredis, setuplogging
-
+from controllers.train_scheduler import ScheduleUser
 
 SKILL_NAME = "Jersey Trains"
 HELP_MESSAGE = "I can help you find a New Jersey Transit train to your desired destination"
@@ -40,6 +40,36 @@ def lambda_handler(event, context):
 
 # --------------- Response handlers -----------------
 
+def set_home_station(request: dict, session: dict):
+    """set the home station for the user"""
+    try:
+        station = request['intent']['slots']['station']['value']
+        aws_user_id = session['user']['userId']
+        success = ScheduleUser.set_home_station(station=station,
+                                                user_id=aws_user_id)
+        if success:
+            return response(speech_response(HOME_STATION_SET.format(station), True))
+
+        # some problem, tell the user. TBD validate brewery & other things,
+        # perhaps ask for clarification
+        setuplogging.LOGGING_HANDLER("SetHomeStation, station not found:\"{0}\"".format(station))
+        return response(speech_response(CANNOT_SET_HOME.format(station), True))
+    except KeyError:
+        return response(speech_response(ERROR_NO_STATION, True))
+
+
+def get_home_station(request: dict, session: dict):
+    """get the home station for the user"""
+
+    aws_user_id = session['user']['userId']
+    station = ScheduleUser.get_home_station(user_id=aws_user_id)
+    if not station: # didn't find a home
+        return response(speech_response(NO_HOME_STATION_SET, True))
+
+    # some problem, tell the user. TBD validate brewery & other things,
+    # perhaps ask for clarification
+    return response(speech_response(CURRENT_HOME_STATION.format(station), True))
+
 
 def on_intent(request, session, fake_redis=None):
     """ called on receipt of an Intent  """
@@ -60,6 +90,10 @@ def on_intent(request, session, fake_redis=None):
         return get_stop_response()
     elif intent_name == "AMAZON.FallbackIntent":
         return get_fallback_response()
+    elif intent_name == 'GetHomeStation':
+        return get_home_station(request, session)
+    elif intent_name == 'SetHomeStation':
+        return set_home_station(request, session)
 
     return get_help_response()
 

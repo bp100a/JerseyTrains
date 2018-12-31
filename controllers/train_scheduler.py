@@ -2,6 +2,7 @@
 """orchestration for our train schedules"""
 from datetime import datetime, timedelta
 from njtransit import api
+from models import cloudredis
 
 
 class TrainSchedule:
@@ -181,3 +182,26 @@ class TrainSchedule:
                                                         test_argument)
 
         return {'direct': direct_trains, 'indirect': transfer_routes}
+
+
+class ScheduleUser:
+    """Perform user-specific actions """
+    @staticmethod
+    def get_home_station(user_id: str) -> str:
+        """get the home station, if set"""
+        home_key = cloudredis.home_key(user_id)
+        if not cloudredis.REDIS_SERVER.exists(home_key):
+            return ''
+
+        return cloudredis.REDIS_SERVER.get(home_key).decode('utf-8')
+
+    @staticmethod
+    def set_home_station(station: str, user_id: str) -> bool:
+        """set a home station. Make sure it's a valid station"""
+        ts = TrainSchedule()
+        if not ts.validate_station_name(station):
+            return False
+
+        cloudredis.REDIS_SERVER.set(cloudredis.home_key(user_id), station)
+        return True
+

@@ -1,9 +1,14 @@
 """testing for the AWS lambda function interface"""
 import os
+import responses
+from http import HTTPStatus
 import lambda_function
 import fakeredis
 from tests.setupmocking import TestwithMocking
 from models import cloudredis
+from configuration import config
+from tests.njtransit.test_NJTransitAPI import TestNJTransitAPI
+
 
 class TestAWSlambda(TestwithMocking):
 
@@ -76,3 +81,54 @@ class TestAWSlambda(TestwithMocking):
         assert not response['response']['shouldEndSession']
         assert response['response']['outputSpeech']['text'] == lambda_function.HELP_MESSAGE
         assert cloudredis.REDIS_SERVER
+
+    @responses.activate
+    def test_set_home_station_bogus(self):
+        # mock the request
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        test_bytes = TestNJTransitAPI.read_data('train_stations.xml')
+        responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
+
+        set_home_event = {
+            "request": {"type": "IntentRequest", "intent": {"name": "SetHomeStation", "mocked": True,\
+                                                            "slots": {"station": {"value": "bogus"}}}},\
+            "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
+
+        response = lambda_function.lambda_handler(event=set_home_event, context=None)
+        assert response['response']['outputSpeech']['text'] == lambda_function.CANNOT_SET_HOME.format('bogus')
+
+    @responses.activate
+    def test_set_home_station(self):
+        # mock the request
+        url = config.HOSTNAME + "/NJTTrainData.asmx/getStationListXML"
+        test_bytes = TestNJTransitAPI.read_data('train_stations.xml')
+        responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
+
+        set_home_event = {
+            "request": {"type": "IntentRequest", "intent": {"name": "SetHomeStation", "mocked": True,\
+                                                            "slots": {"station": {"value": "Chatham"}}}},\
+            "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
+
+        response = lambda_function.lambda_handler(event=set_home_event, context=None)
+        assert response['response']['outputSpeech']['text'] == lambda_function.HOME_STATION_SET.format('Chatham')
+
+    def test_get_home_station_not_set(self):
+        get_home_event = {
+            "request": {"type": "IntentRequest", "intent": {"name": "GetHomeStation", "mocked": True}},\
+            "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
+
+        response = lambda_function.lambda_handler(event=get_home_event, context=None)
+        assert response['response']['outputSpeech']['text'] == lambda_function.NO_HOME_STATION_SET
+
+    def test_get_home_station_set(self):
+
+        self.test_set_home_station()
+
+        get_home_event = {
+            "request": {"type": "IntentRequest", "intent": {"name": "GetHomeStation", "mocked": True}}, \
+            "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
+
+        response = lambda_function.lambda_handler(event=get_home_event, context=None)
+        assert response['response']['outputSpeech']['text'] == lambda_function.CURRENT_HOME_STATION.format('Chatham')
+
+

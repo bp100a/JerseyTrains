@@ -62,3 +62,10 @@ def station_list() -> dict:
     if isinstance(stations, bytes):
         return literal_eval(stations.decode('utf-8'))
     return {}
+
+
+def home_key(user_id: str) -> str:
+    """create key for the home value (a uuid no doubt)"""
+    return "JerseyTrains_home_" + user_id.replace(' ', '') + "_uid"
+
+

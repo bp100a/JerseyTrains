@@ -9,6 +9,7 @@ from njtransit.api import NJTransitAPI
 from configuration import config
 from requests import RequestException
 
+
 class TestNJTransitAPI(TestCase):
     """encapsulates our NJTransit API tests"""
     @staticmethod
