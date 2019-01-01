@@ -1,5 +1,6 @@
 """testing for the AWS lambda function interface"""
 import os
+from datetime import datetime
 import responses
 from http import HTTPStatus
 import lambda_function
@@ -131,4 +132,16 @@ class TestAWSlambda(TestwithMocking):
         response = lambda_function.lambda_handler(event=get_home_event, context=None)
         assert response['response']['outputSpeech']['text'] == lambda_function.CURRENT_HOME_STATION.format('Chatham')
 
+    def test_format_speech_time_1am(self):
 
+        test_time = datetime.strptime('11-Dec-2018 01:00:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        speech_time = lambda_function.format_speech_time(test_time)
+        assert speech_time == '1 <say-as interpret-as="spell-out">AM</say-as>'
+
+        test_time = datetime.strptime('11-Dec-2018 03:05:00 PM', '%d-%b-%Y %I:%M:%S %p')
+        speech_time = lambda_function.format_speech_time(test_time)
+        assert speech_time == '3 <say-as interpret-as="spell-out">O</say-as>5 <say-as interpret-as="spell-out">PM</say-as>'
+
+        test_time = datetime.strptime('11-Dec-2018 12:10:00 PM', '%d-%b-%Y %I:%M:%S %p')
+        speech_time = lambda_function.format_speech_time(test_time)
+        assert speech_time == '12 10 <say-as interpret-as="spell-out">AM</say-as>'
