@@ -30,3 +30,5 @@ echo "REDIS_PASSWORD ="\"bogus.redis.password\" >> config.py
 echo "USERNAME = " \"$NJT_USERNAME\" >> config.py
 echo "APIKEY = " \"$TEST_NJT_APIKEY\" >> config.py
 echo "HOSTNAME =" \"$TEST_NJT_URL\" >> config.py
+
+cd ..
