@@ -114,6 +114,11 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
+          name: create config.py
+          command: |
+            sh ./config.sh
+            mv -f configuration/prod_config.py configuration/config.py
+      - run:
           name: create lambda image
           command: |
             mkdir lambda_deploy
