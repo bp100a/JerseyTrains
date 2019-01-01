@@ -121,6 +121,7 @@ jobs:
             cp -v -r controllers lambda_deploy
             cp -v -r models lambda_deploy
             cp -v -r njtransit lambda_deploy
+            cp -v -r configuration lambda_deploy
             cp *.py lambda_deploy
       - run:
           name: remove unnecessary modules
