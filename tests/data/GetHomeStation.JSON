@@ -33,7 +33,7 @@
 		"locale": "en-US",
 		"intent": {
 			"name": "GetHomeStation",
-			"confirmationStatus": "NONE",
+			"confirmationStatus": "NONE"
 		}
 	}
 }
