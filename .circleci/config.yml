@@ -118,6 +118,7 @@ jobs:
           command: |
             sh ./config.sh
             mv -f configuration/prod_config.py configuration/config.py
+            cat configuration/prod_config.py
       - run:
           name: create lambda image
           command: |
