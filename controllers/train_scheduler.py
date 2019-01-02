@@ -146,7 +146,8 @@ class TrainSchedule:
 
         # lookup schedule with abbreviated name
         starting_station_trains = self.njt.train_schedule(
-            self.njt.train_stations[starting_station_abbreviated], test_argument)
+            starting_station_abbreviated,
+            test_argument)
 
         # easy stuff first, direct routes where
         # the train goes directly to the ending station
@@ -168,6 +169,8 @@ class TrainSchedule:
                 else:
                     possible_indirect_trains.append(train)
         except KeyError as dict_key_error:
+            raise
+        except TypeError:
             raise
 
         # okay we have our direct routes, now we need to

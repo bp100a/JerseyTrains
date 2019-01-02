@@ -149,7 +149,7 @@ def next_train(request: dict, session: dict) -> dict:
         return response(speech_response(DESTINATION_INVALID.format(destination_station), True))
 
     # okay the start & destination are valid, so it's time to do some routing
-    current_time = datetime.time
+    current_time = datetime.now()
     if 'time' in request['intent']:
         current_time = request['intent']['time']
     start_abbreviated = tso.train_stations(start_station)
