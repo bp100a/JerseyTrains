@@ -32,7 +32,7 @@
 		"timestamp": "2018-09-05T22:04:50Z",
 		"locale": "en-US",
 		"intent": {
-			"name": "SetHomeStation",
+			"name": "SetHome",
 			"confirmationStatus": "NONE",
             "slots": {
               "station": {
