@@ -105,8 +105,8 @@ def format_speech_time(train_time: datetime) -> str:
 def next_train_direct_response(start: str, destination: str, direct_routes: dict) -> dict:
     """for now, just return the first direct route"""
     try:
-        start_time = direct_routes[0]['stops'][start]['departure']
-        arrival_time = direct_routes[0]['stops'][destination]['departure']
+        start_time = direct_routes[0]['stops'][start]['time']
+        arrival_time = direct_routes[0]['stops'][destination]['time']
 
         # for times do AM/PM as '<say-as interpret-as="spell-out">PM</say-as>'
         direct_response = NEXT_TRAIN_DIRECT.format(start, destination,
@@ -121,10 +121,10 @@ def next_train_direct_response(start: str, destination: str, direct_routes: dict
 def next_train_response(start_station: str, destination_station: str, train_routes: dict) -> dict:
     """okay, we should have a route (or more), so create our speech response"""
     if train_routes:
-        if train_routes.has_key('direct'):
+        if 'direct' in train_routes and train_routes['direct']:
             return next_train_direct_response(start_station, destination_station, train_routes['direct'])
 
-        if train_routes.has_key('indirect'):
+        if 'indirect' in train_routes and train_routes['indirect']:
             next_train_indirect_response(start_station, destination_station, train_routes['indirect'])
 
     return response(speech_response(NO_TRAINS.format(start_station, destination_station), True))
@@ -144,12 +144,18 @@ def next_train(request: dict, session: dict) -> dict:
         return response(speech_response(DESTINATION_SAME_AS_HOME, True))
 
     # validate the destination station
-    if not train_scheduler.TrainSchedule.validate_station_name(destination_station):
+    tso = train_scheduler.TrainSchedule()
+    if not tso.validate_station_name(destination_station):
         return response(speech_response(DESTINATION_INVALID.format(destination_station)), True)
 
     # okay the start & destination are valid, so it's time to do some routing
     current_time = datetime.time
-    train_routes = train_scheduler.TrainSchedule().schedule(start_station, destination_station, departure_time=datetime.now())
+    if 'time' in request['intent']:
+        current_time = request['intent']['time']
+    start_abbreviated = tso.train_stations(start_station)
+    destination_abbreviated = tso.train_stations(destination_station)
+    train_routes = tso.schedule(start_abbreviated, destination_abbreviated, departure_time=current_time)
+    return next_train_response(start_station, destination_station, train_routes)
 
 
 def on_intent(request, session, fake_redis=None):

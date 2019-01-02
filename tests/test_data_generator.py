@@ -16,7 +16,7 @@ from configuration import config
 class TrainScheduleData:
 
     # define our stations
-    station_names = { # Stations for line #1
+    station_names = {  # Stations for line #1
                      'Line 1 Station 1': '11',
                      'Line 1 Station 2': '12',
                      'Line 1 Station 3': '13',
