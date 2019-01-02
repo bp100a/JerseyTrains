@@ -105,7 +105,13 @@ class TrainScheduleData:
         pass in the station name and the current time so we can
         compute the relevant schedule """
         schedules = {}
-        station_abbreviation = self.station_names[station_name]
+        station_abbreviation = station_name
+        try:
+            station_abbreviation = self.station_names[station_name]
+        except KeyError:
+            #  this is really the abbreviation
+            station_name = next(key for key, value in self.station_names.items() if value == station_abbreviation)
+
         schedule = '<?xml version="1.0" encoding="utf-8"?>\n'
         schedule += '<STATION>\n'
         schedule += ' '*2 + '<STATION_2CHAR>{0}</STATION_2CHAR>\n'.format(station_abbreviation)
