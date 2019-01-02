@@ -119,6 +119,8 @@ jobs:
             sh ./config.sh
             cat configuration/prod_config.py
             mv -f configuration/prod_config.py configuration/config.py
+            echo "configuration post copy"
+            cat configuration/config.py
       - run:
           name: create lambda image
           command: |
