@@ -177,9 +177,9 @@ def on_intent(request, session, fake_redis=None):
         return get_stop_response()
     elif intent_name == "AMAZON.FallbackIntent":
         return get_fallback_response()
-    elif intent_name == 'GetHomeStation':
+    elif intent_name == 'GetHome':
         return get_home_station(request, session)
-    elif intent_name == 'SetHomeStation':
+    elif intent_name == 'SetHome':
         return set_home_station(request, session)
     elif intent_name == 'NextTrain':
         return next_train(request, session)
