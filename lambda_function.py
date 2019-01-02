@@ -146,7 +146,7 @@ def next_train(request: dict, session: dict) -> dict:
     # validate the destination station
     tso = train_scheduler.TrainSchedule()
     if not tso.validate_station_name(destination_station):
-        return response(speech_response(DESTINATION_INVALID.format(destination_station)), True)
+        return response(speech_response(DESTINATION_INVALID.format(destination_station), True))
 
     # okay the start & destination are valid, so it's time to do some routing
     current_time = datetime.time
