@@ -94,7 +94,7 @@ class TestAWSlambda(TestwithMocking):
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         set_home_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "SetHomeStation", "mocked": True,\
+            "request": {"type": "IntentRequest", "intent": {"name": "SetHome", "mocked": True,\
                                                             "slots": {"station": {"value": "bogus"}}}},\
             "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
 
@@ -109,7 +109,7 @@ class TestAWSlambda(TestwithMocking):
         responses.add(responses.POST, url, body=test_bytes, status=HTTPStatus.CREATED)
 
         set_home_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "SetHomeStation", "mocked": True,\
+            "request": {"type": "IntentRequest", "intent": {"name": "SetHome", "mocked": True,\
                                                             "slots": {"station": {"value": "Chatham"}}}},\
             "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
 
@@ -118,7 +118,7 @@ class TestAWSlambda(TestwithMocking):
 
     def test_get_home_station_not_set(self):
         get_home_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "GetHomeStation", "mocked": True}},\
+            "request": {"type": "IntentRequest", "intent": {"name": "GetHome", "mocked": True}},\
             "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
 
         response = lambda_function.lambda_handler(event=get_home_event, context=None)
@@ -129,7 +129,7 @@ class TestAWSlambda(TestwithMocking):
         self.test_set_home_station()
 
         get_home_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "GetHomeStation", "mocked": True}}, \
+            "request": {"type": "IntentRequest", "intent": {"name": "GetHome", "mocked": True}}, \
             "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
 
         response = lambda_function.lambda_handler(event=get_home_event, context=None)
@@ -225,7 +225,7 @@ class TestAWSlambda(TestwithMocking):
         # set the home station
         home_station = 'Line 1 Station 1'
         set_home_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "SetHomeStation", "mocked": True,\
+            "request": {"type": "IntentRequest", "intent": {"name": "SetHome", "mocked": True,\
                                                             "slots": {"station": {"value": home_station}}}},\
             "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
 
@@ -262,7 +262,7 @@ class TestAWSlambda(TestwithMocking):
         home_station = 'Line 1 Station 1'
         destination_station = 'Line 1 Station 9'
         set_home_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "SetHomeStation",
+            "request": {"type": "IntentRequest", "intent": {"name": "SetHome",
                                                             "slots": {"station": {"value": home_station}}}},
             "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
 
