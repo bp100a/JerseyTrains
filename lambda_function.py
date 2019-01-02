@@ -5,6 +5,8 @@ import re
 from datetime import datetime
 from models import cloudredis, setuplogging
 from controllers import train_scheduler
+from configuration import config
+
 
 SKILL_NAME = "Jersey Trains"
 HELP_MESSAGE = "I can help you find a New Jersey Transit train to your desired destination"
@@ -273,5 +275,6 @@ def response(speech_message) -> dict:
     """ create a simple json response  """
     return {
         'version': '1.0',
-        'response': speech_message
+        'response': speech_message,
+        'build_number': config.BUILD_NUMBER
     }
