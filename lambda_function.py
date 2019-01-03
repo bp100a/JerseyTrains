@@ -82,9 +82,22 @@ def get_home_station(request: dict, session: dict) -> dict:
     return response(speech_response(CURRENT_HOME_STATION.format(station), True))
 
 
-def next_train_indirect_response(start: str, destination: str, indirect_routes: dict) -> dict:
-    """for now, just return the first indirect route"""
-    return response(speech_response(NOT_IMPLEMENTED, True))
+def next_train_indirect_response(start: str, destination: str, indirect_route: dict) -> dict:
+    """passed only 1 indirect route, the best one found"""
+    try:
+        start_time = indirect_route['start']['stops'][start]['time']
+        arrival_time = indirect_route['transfer']['stops'][destination]['time']
+        transfer_station = indirect_route['station']
+        transfer_time = indirect_route['transfer']['stops'][transfer_station]['time']
+
+        indirect_response = NEXT_TRAIN_INDIRECT. \
+            format(start, destination,
+                   format_speech_time(start_time),
+                   format_speech_time(arrival_time),
+                   transfer_station)
+        return response(speech_response(indirect_response, True))
+    except (KeyError, TypeError):
+        return response(speech_response(PROBLEM_WITH_ROUTE, True))
 
 
 def format_speech_time(train_time: datetime) -> str:
@@ -105,11 +118,11 @@ def format_speech_time(train_time: datetime) -> str:
     return '{0}'.format(train_time.hour) + minute_str + '<say-as interpret-as="spell-out">AM</say-as>'
 
 
-def next_train_direct_response(start: str, destination: str, direct_routes: dict) -> dict:
-    """for now, just return the first direct route"""
+def next_train_direct_response(start: str, destination: str, direct_route: dict) -> dict:
+    """passed only 1 direct route, the best"""
     try:
-        start_time = direct_routes['stops'][start]['time']
-        arrival_time = direct_routes['stops'][destination]['time']
+        start_time = direct_route['stops'][start]['time']
+        arrival_time = direct_route['stops'][destination]['time']
 
         # for times do AM/PM as '<say-as interpret-as="spell-out">PM</say-as>'
         direct_response = NEXT_TRAIN_DIRECT.format(start, destination,
@@ -117,7 +130,7 @@ def next_train_direct_response(start: str, destination: str, direct_routes: dict
                                                    format_speech_time(arrival_time))
 
         return response(speech_response_ssml(direct_response, True))
-    except (KeyError, IndexError):
+    except (KeyError, TypeError):
         return response(speech_response(PROBLEM_WITH_ROUTE, True))
 
 

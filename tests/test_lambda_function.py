@@ -14,6 +14,10 @@ from tests.njtransit.test_NJTransitAPI import TestNJTransitAPI
 from tests.test_data_generator import TrainScheduleData, TestSchedulerGeneratedData
 
 
+def to_datetime(date_string: str) -> datetime:
+    return datetime.strptime(date_string, '%d-%b-%Y %I:%M:%S %p')
+
+
 class TestAWSlambda(TestwithMocking):
 
     @staticmethod
@@ -356,6 +360,53 @@ class TestAWSlambda(TestwithMocking):
 
         response = lambda_function.lambda_handler(event=next_station_event, context=None)
         assert response
+
+    def test_next_train_direct_response_error(self):
+
+        route = {'stops': 'generate key error'}
+        response = lambda_function.\
+            next_train_direct_response(start='start',
+                                       destination='destination',
+                                       direct_route=route)
+
+        assert response['response']['outputSpeech']['text'] == lambda_function.PROBLEM_WITH_ROUTE
+
+    def test_next_train_indirect_response_error(self):
+
+        route = {'stops': 'generate key error'}
+        response = lambda_function.\
+            next_train_indirect_response(start='start',
+                                         destination='destination',
+                                         indirect_route=route)
+
+        assert response['response']['outputSpeech']['text'] == lambda_function.PROBLEM_WITH_ROUTE
+
+    def test_set_home_station_error(self):
+        response = lambda_function.set_home_station(request={}, session={})
+        assert response['response']['outputSpeech']['text'] == lambda_function.ERROR_NO_STATION
+
+    def test_next_train_indirect_response(self):
+        route = {'start':
+            {'stops': {
+                'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:30:00 AM')},
+                'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:00:00 AM')}
+            }
+            },
+            'transfer':
+                {'stops': {
+                    'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:25:00 AM')},
+                    'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:10:00 AM')}
+                }
+                },
+            'station': 'Line 1 Station 5'
+        }
+
+        response = lambda_function.next_train_indirect_response('Line 1 Station 1', 'Line 1 Station 9', route)
+        assert 'The next train from' in response['response']['outputSpeech']['text']
+        assert 'with a transfer at' in response['response']['outputSpeech']['text']
+
+
+
 
     # @staticmethod
     # def test_live_lambda_next_train():
