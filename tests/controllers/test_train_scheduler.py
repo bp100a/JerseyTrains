@@ -9,6 +9,10 @@ from controllers import train_scheduler
 from configuration import config
 
 
+def to_datetime(date_string: str) -> datetime:
+    return datetime.strptime(date_string, '%d-%b-%Y %I:%M:%S %p')
+
+
 class TestTrainScheduler(TestCase):
 
     @staticmethod
@@ -65,3 +69,173 @@ class TestTrainScheduler(TestCase):
 
         assert train_routes
 
+    def test_best_schedule_none(self):
+        """no routes to test"""
+        routes = {}
+        best_route = train_scheduler.TrainSchedule.best_route('Line 1 Station 1', 'Line 1 Station 9', routes)
+        assert not best_route
+
+    def test_best_schedule_direct_only(self):
+        """only a direct route to test"""
+        routes = {'direct': [
+            {'stops': {
+                'Line 1 Station 1': {'time': datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')},
+                'Line 1 Station 9': {'time': datetime.strptime('11-Dec-2018 02:00:00 AM', '%d-%b-%Y %I:%M:%S %p')}
+                }
+            },
+            {'stops': {
+                'Line 1 Station 1': {'time': datetime.strptime('11-Dec-2018 01:45:00 AM', '%d-%b-%Y %I:%M:%S %p')},
+                'Line 1 Station 9': {'time': datetime.strptime('11-Dec-2018 02:00:00 AM', '%d-%b-%Y %I:%M:%S %p')}
+                }
+            }
+            ]
+        }
+
+        best_route = train_scheduler.TrainSchedule.best_route('Line 1 Station 1', 'Line 1 Station 9', routes)
+        assert best_route['direct'] == routes['direct'][1]
+
+    def test_best_schedule_indirect_only(self):
+        """only an indirect route to test"""
+        routes = {'indirect': [
+            {'start':
+                {'stops': {
+                    'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:30:00 AM')},
+                    'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:00:00 AM')}
+                }
+                },
+                'transfer':
+                    {'stops': {
+                        'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:25:00 AM')},
+                        'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:10:00 AM')}
+                    }
+                    },
+                'station': 'Line 1 Station 5'
+            },
+
+            {'start':
+                {'stops': {
+                    'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 02:30:00 AM')},
+                    'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:40:00 AM')}
+                }
+                },
+                'transfer':
+                    {'stops': {
+                        'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:50:00 AM')},
+                        'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:05:00 AM')}
+                    }
+                    },
+                'station': 'Line 1 Station 5'
+            }
+        ],
+        }
+
+        best_route = train_scheduler.TrainSchedule.best_route('Line 1 Station 1', 'Line 1 Station 9', routes)
+        assert best_route['indirect'] == routes['indirect'][1]
+
+    def test_best_schedule_direct_and_indirect_routes(self):
+        """best is the 2nd direct route, arrives same time but leaves later"""
+        direct = {'direct': [
+            {'stops': {
+                'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:30:00 AM')},
+                'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 02:00:00 AM')}
+                }
+            },
+            {'stops': {
+                'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:45:00 AM')},
+                'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 02:00:00 AM')}
+                }
+            }
+            ]
+        }
+
+        indirect = {'indirect': [
+            {'start':
+                {'stops': {
+                    'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:30:00 AM')},
+                    'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:00:00 AM')}
+                }
+                },
+                'transfer':
+                    {'stops': {
+                        'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:25:00 AM')},
+                        'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:10:00 AM')}
+                    }
+                    },
+                'station': 'Line 1 Station 5'
+            },
+
+            {'start':
+                {'stops': {
+                    'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 02:30:00 AM')},
+                    'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:40:00 AM')}
+                }
+                },
+                'transfer':
+                    {'stops': {
+                        'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:50:00 AM')},
+                        'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:05:00 AM')}
+                    }
+                    },
+                'station': 'Line 1 Station 5'
+            }
+        ],
+        }
+
+        routes = {'direct': direct['direct'], 'indirect': indirect['indirect']}
+
+        best_route = train_scheduler.TrainSchedule.best_route('Line 1 Station 1', 'Line 1 Station 9', routes)
+        assert best_route['direct'] == routes['direct'][1]
+
+    def test_best_schedule_direct_and_indirect_routes_2(self):
+        """2nd indirect route wins"""
+        direct = {'direct': [
+            {'stops': {
+                'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:30:00 AM')},
+                'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:10:00 AM')}
+                }
+            },
+            {'stops': {
+                'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:45:00 AM')},
+                'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 04:00:00 AM')}
+                }
+            }
+            ]
+        }
+
+        indirect = {'indirect': [
+            {'start':
+                {'stops': {
+                    'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 01:30:00 AM')},
+                    'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:00:00 AM')}
+                }
+                },
+                'transfer':
+                    {'stops': {
+                        'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:25:00 AM')},
+                        'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:10:00 AM')}
+                    }
+                    },
+                'station': 'Line 1 Station 5'
+            },
+
+            {'start':
+                {'stops': {
+                    'Line 1 Station 1': {'time': to_datetime('11-Dec-2018 02:30:00 AM')},
+                    'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:40:00 AM')}
+                }
+                },
+                'transfer':
+                    {'stops': {
+                        'Line 1 Station 5': {'time': to_datetime('11-Dec-2018 02:50:00 AM')},
+                        'Line 1 Station 9': {'time': to_datetime('11-Dec-2018 03:05:00 AM')}
+                    }
+                    },
+                'station': 'Line 1 Station 5'
+            }
+        ],
+        }
+
+        routes = {'direct': direct['direct'], 'indirect': indirect['indirect']}
+
+        best_route = train_scheduler.TrainSchedule.best_route('Line 1 Station 1', 'Line 1 Station 9', routes)
+        assert best_route['indirect'] == routes['indirect'][1]

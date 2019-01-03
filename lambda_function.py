@@ -65,6 +65,7 @@ def set_home_station(request: dict, session: dict) -> dict:
         setuplogging.LOGGING_HANDLER("SetHomeStation, station not found:\"{0}\"".format(station))
         return response(speech_response(CANNOT_SET_HOME.format(station), True))
     except KeyError:
+        setuplogging.LOGGING_HANDLER("SetHomeStation, KeyError")
         return response(speech_response(ERROR_NO_STATION, True))
 
 
@@ -107,8 +108,8 @@ def format_speech_time(train_time: datetime) -> str:
 def next_train_direct_response(start: str, destination: str, direct_routes: dict) -> dict:
     """for now, just return the first direct route"""
     try:
-        start_time = direct_routes[0]['stops'][start]['time']
-        arrival_time = direct_routes[0]['stops'][destination]['time']
+        start_time = direct_routes['stops'][start]['time']
+        arrival_time = direct_routes['stops'][destination]['time']
 
         # for times do AM/PM as '<say-as interpret-as="spell-out">PM</say-as>'
         direct_response = NEXT_TRAIN_DIRECT.format(start, destination,
@@ -129,6 +130,7 @@ def next_train_response(start_station: str, destination_station: str, train_rout
         if 'indirect' in train_routes and train_routes['indirect']:
             next_train_indirect_response(start_station, destination_station, train_routes['indirect'])
 
+    setuplogging.LOGGING_HANDLER("NextTrain: No Trains from {0} -> {1} ??".format(start_station, destination_station))
     return response(speech_response(NO_TRAINS.format(start_station, destination_station), True))
 
 
@@ -157,7 +159,10 @@ def next_train(request: dict, session: dict) -> dict:
     start_abbreviated = tso.train_stations(start_station)
     destination_abbreviated = tso.train_stations(destination_station)
     train_routes = tso.schedule(start_abbreviated, destination_abbreviated, departure_time=current_time)
-    return next_train_response(start_station, destination_station, train_routes)
+
+    # we have some routes, both direct & indirect, let's pick the "best" one for our response
+    best_route = tso.best_route(start_station, destination_station, train_routes)
+    return next_train_response(start_station, destination_station, best_route)
 
 
 def on_intent(request, session, fake_redis=None):
@@ -186,6 +191,7 @@ def on_intent(request, session, fake_redis=None):
     elif intent_name == 'NextTrain':
         return next_train(request, session)
 
+    setuplogging.LOGGING_HANDLER("Unrecognized intent! {0}".format(intent_name))
     return get_help_response()
 
 
@@ -223,7 +229,6 @@ def on_session_ended():
 
 
 def on_launch(request):
-
     """ called on Launch, we reply with a launch message  """
     return get_launch_response()
 

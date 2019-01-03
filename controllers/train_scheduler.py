@@ -134,6 +134,82 @@ class TrainSchedule:
         # remove any redundant routes from the list
         return TrainSchedule.optimize_indirect_routes(transfer_routes, ending_station)
 
+    @staticmethod
+    def best_route(starting_station_name: str, ending_station_name: str, routes: dict) -> dict:
+        """
+        Given a set of direct & indirect routes, find the *best* route:
+
+            find the *best* direct train. Best means
+            it arrives at the destination the earliest.
+            if more than one arrives at the destination at
+            the same time, take the one that leaves the
+            start station the latest
+
+        :param self:
+        :param starting_station_name: starting station (not abbreviation)
+        :param ending_station_name: destination station (not abbreviation)
+        :param routes: dictionary of {'direct':[], 'indirect':[]}, can be empty
+        :return: dictionary, either {'direct':[]} or {'indirect':[]}
+        """
+
+        # simple case of empty schedule
+        if 'direct' not in routes and 'indirect' not in routes:
+            return {}
+
+        best_direct_train = {}
+        if 'direct' in routes:
+            leaves = None
+            arrives = None
+            for train in routes['direct']:
+                if leaves is None:
+                    leaves = train['stops'][starting_station_name]['time']
+                if arrives is None:
+                    arrives = train['stops'][ending_station_name]['time']
+                    best_direct_train = train
+                if best_direct_train != train:
+                    if arrives == train['stops'][ending_station_name]['time']:
+                        if leaves < train['stops'][starting_station_name]['time']:
+                            best_direct_train = train
+                            leaves = train['stops'][ending_station_name]['time']
+
+                    if arrives > train['stops'][ending_station_name]['time']:
+                        best_direct_train = train
+                        arrives = train['stops'][ending_station_name]['time']
+
+        # now find the best indirect, same criteria as the best direct
+        best_indirect_train = {}
+        if 'indirect' in routes:
+            leaves = None
+            arrives = None
+            for train in routes['indirect']:
+                if leaves is None:
+                    leaves = train['start']['stops'][starting_station_name]['time']
+                if arrives is None:
+                    arrives = train['transfer']['stops'][ending_station_name]['time']
+                    best_indirect_train = train
+                if best_indirect_train != train:
+                    if arrives == train['transfer']['stops'][ending_station_name]['time']:
+                        if leaves < train['start']['stops'][starting_station_name]['time']:
+                            best_indirect_train = train
+                            leaves = train['transfer']['stops'][ending_station_name]['time']
+
+                    if arrives > train['transfer']['stops'][ending_station_name]['time']:
+                        best_indirect_train = train
+                        arrives = train['transfer']['stops'][ending_station_name]['time']
+
+        if best_direct_train and not best_indirect_train:
+            return {'direct': best_direct_train}
+        if best_indirect_train and not best_direct_train:
+            return {'indirect': best_indirect_train}
+
+        # TBD: should we worry about 'ties' at the destination and look for latest
+        # leaving starting station?
+        if best_indirect_train['transfer']['stops'][ending_station_name]['time'] < \
+            best_direct_train['stops'][ending_station_name]['time']:
+            return {'indirect': best_indirect_train}
+
+        return {'direct': best_direct_train}
+
     def schedule(self, starting_station_abbreviated: str,
                  ending_station_abbreviated:
                  str, departure_time: datetime,

@@ -62,4 +62,5 @@ class TestLogging(TestCase):
 
         string_to_log = "log this string"
         setuplogging.LOGGING_HANDLER(string_to_log)
-        assert string_to_log == setuplogging.MOCK_LOG
+        assert string_to_log in setuplogging.MOCK_LOG
+        assert '[BUILD#' in setuplogging.MOCK_LOG
