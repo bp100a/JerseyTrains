@@ -205,7 +205,7 @@ class TrainSchedule:
         # TBD: should we worry about 'ties' at the destination and look for latest
         # leaving starting station?
         if best_indirect_train['transfer']['stops'][ending_station_name]['time'] < \
-            best_direct_train['stops'][ending_station_name]['time']:
+                best_direct_train['stops'][ending_station_name]['time']:
             return {'indirect': best_indirect_train}
 
         return {'direct': best_direct_train}
