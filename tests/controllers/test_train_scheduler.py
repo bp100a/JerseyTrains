@@ -117,6 +117,14 @@ class TestTrainScheduler(TestCase):
         best_route = train_scheduler.TrainSchedule.best_route('Line 1 Station 1', 'Line 1 Station 9', routes={})
         assert not best_route
 
+    def test_best_route_empty(self):
+        empty_routes = {'direct': {},
+                        'indirect': {}
+        }
+
+        best_route = train_scheduler.TrainSchedule.best_route('Line 1 Station 1', 'Line 1 Station 9', routes=empty_routes)
+        assert not best_route
+
     def test_best_schedule_indirect_only(self):
         """only an indirect route to test"""
         routes = {'indirect': [
