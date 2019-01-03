@@ -202,6 +202,10 @@ class TrainSchedule:
         if best_indirect_train and not best_direct_train:
             return {'indirect': best_indirect_train}
 
+        # this would be very strange indeed
+        if not best_direct_train and not best_direct_train:
+            return {}
+
         # TBD: should we worry about 'ties' at the destination and look for latest
         # leaving starting station?
         if best_indirect_train['transfer']['stops'][ending_station_name]['time'] < \
