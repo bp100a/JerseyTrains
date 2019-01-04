@@ -95,6 +95,9 @@ class TrainSchedule:
             for transfer_train in ending_station_trains:
                 if starting_station in transfer_train['stops']:
                     continue  # already have this in direct route
+                arrival_time = transfer_train['stops'][ending_station]['time']
+                if arrival_time <= departure_time:
+                    continue
 
                 # we need to find the intersection of the 'start_train'
                 # and our tentative 'transfer_train'
@@ -103,16 +106,17 @@ class TrainSchedule:
                     # if this is the starting station, skip
                     if start_stations == starting_station:
                         continue
-                    # ignore trains that have already left
-                    if start_train['stops'][start_stations]['time'] < departure_time:
+
+                    # ignore trains that have already left or going in wrong direction
+                    start_time = start_train['stops'][start_stations]['time']
+                    if start_time < departure_time or start_time >= arrival_time:
                         continue
                     # if intersection station isn't in transfer train, skip
                     if start_stations not in transfer_train['stops']:
                         continue
                     transfer_station = transfer_train['stops'][start_stations]
-
                     # to transfer, the transfer has to arrive after the intersection train
-                    if transfer_station['time'] < start_train['stops'][start_stations]['time']:
+                    if transfer_station['time'] <= start_time:
                         continue  # no time
 
                     # make sure the transfer train is going the correct direction!!
@@ -241,11 +245,14 @@ class TrainSchedule:
             for train in starting_station_trains:
                 if starting_station_name not in train['stops']:  # weird case to catch
                     continue
-                if train['stops'][starting_station_name]\
-                ['time'] < departure_time:
+                start_time = train['stops'][starting_station_name]['time']
+                if start_time < departure_time:
                     continue
                 if ending_station_name in train['stops']:
-                    direct_trains.append(train)
+                    arrival_time = train['stops'][ending_station_name]['time']
+                    if arrival_time > departure_time and \
+                            arrival_time > start_time:
+                        direct_trains.append(train)
                 else:
                     possible_indirect_trains.append(train)
         except (KeyError, TypeError):
