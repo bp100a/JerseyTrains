@@ -29,11 +29,16 @@ NEXT_TRAIN_DIRECT = "The next train from {0} to {1} will leave at {2} and arrive
 NEXT_TRAIN_INDIRECT = NEXT_TRAIN_DIRECT + " with a transfer at {4}"
 PROBLEM_WITH_ROUTE = "There was a problem with the routing information, please try later"
 
+
+def log(message: str) -> None:
+    setuplogging.LOGGING_HANDLER(message)
+
+
 def lambda_handler(event, context):
 
     """  App entry point  """
     setuplogging.initialize_logging(mocking=False) # make sure logging is setup
-    setuplogging.LOGGING_HANDLER('EVENT{}'.format(event)) # log the event
+    log('EVENT{}'.format(event)) # log the event
 
     if event['session']['new']:
         on_session_started()
@@ -47,8 +52,8 @@ def lambda_handler(event, context):
 
     return None
 
-
 # --------------- Response handlers -----------------
+
 
 def set_home_station(request: dict, session: dict) -> dict:
     """set the home station for the user"""
@@ -62,10 +67,10 @@ def set_home_station(request: dict, session: dict) -> dict:
 
         # some problem, tell the user. TBD validate brewery & other things,
         # perhaps ask for clarification
-        setuplogging.LOGGING_HANDLER("SetHomeStation, station not found:\"{0}\"".format(station))
+        log("SetHomeStation, station not found:\"{0}\"".format(station))
         return response(speech_response(CANNOT_SET_HOME.format(station), True))
     except KeyError:
-        setuplogging.LOGGING_HANDLER("SetHomeStation, KeyError")
+        log("SetHomeStation, KeyError")
         return response(speech_response(ERROR_NO_STATION, True))
 
 
@@ -143,7 +148,7 @@ def next_train_response(start_station: str, destination_station: str, train_rout
         if 'indirect' in train_routes and train_routes['indirect']:
             next_train_indirect_response(start_station, destination_station, train_routes['indirect'])
 
-    setuplogging.LOGGING_HANDLER("NextTrain: No Trains from {0} -> {1} ??".format(start_station, destination_station))
+    log("NextTrain: No Trains from {0} -> {1} ??".format(start_station, destination_station))
     return response(speech_response(NO_TRAINS.format(start_station, destination_station), True))
 
 
@@ -171,6 +176,8 @@ def next_train(request: dict, session: dict) -> dict:
         current_time = request['intent']['time']
     start_abbreviated = tso.train_stations(start_station)
     destination_abbreviated = tso.train_stations(destination_station)
+    log("[NEXT_TRAIN]: start {0}, destination {1}, departure_time ={2}".
+        format(start_abbreviated, destination_abbreviated, current_time))
     train_routes = tso.schedule(start_abbreviated, destination_abbreviated, departure_time=current_time)
 
     # we have some routes, both direct & indirect, let's pick the "best" one for our response
@@ -204,7 +211,7 @@ def on_intent(request, session, fake_redis=None):
     elif intent_name == 'NextTrain':
         return next_train(request, session)
 
-    setuplogging.LOGGING_HANDLER("Unrecognized intent! {0}".format(intent_name))
+    log("Unrecognized intent! {0}".format(intent_name))
     return get_help_response()
 
 
