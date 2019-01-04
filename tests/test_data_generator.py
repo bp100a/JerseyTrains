@@ -4,13 +4,25 @@ this infernal problem is to generate specific test
 data to cover all conditions"""
 from unittest import TestCase
 from datetime import datetime, timedelta
-import os
+import pytz
 from datetime import datetime
 from http import HTTPStatus
 from urllib import parse
 import responses
 from controllers import train_scheduler
 from configuration import config
+
+
+def utc_now() -> datetime:
+    return pytz.timezone('UTC').localize(datetime.utcnow())
+
+
+def to_ET(datetime_string: str) -> datetime:
+    """convert date/time string to Eastern Time"""
+    timezone = pytz.timezone("America/New_York")
+    d_naive = datetime.strptime(datetime_string, '%d-%b-%Y %I:%M:%S %p')
+    d_aware = timezone.localize(d_naive)
+    return d_aware
 
 
 class TrainScheduleData:
@@ -397,7 +409,7 @@ class TestSchedulerGeneratedData(TestCase):
             callback=TestSchedulerGeneratedData.request_callback_train_schedule,
             content_type='text/xml',)
 
-        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 01:30:00 AM')
         scheduler = train_scheduler.TrainSchedule()
         train_routes = scheduler.schedule(starting_station_abbreviated='11',
                                           ending_station_abbreviated='19',
@@ -427,7 +439,7 @@ class TestSchedulerGeneratedData(TestCase):
             callback=TestSchedulerGeneratedData.request_callback_train_schedule,
             content_type='text/xml',)
 
-        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 01:30:00 AM')
         scheduler = train_scheduler.TrainSchedule()
         train_routes = scheduler.schedule(starting_station_abbreviated='11',
                                           ending_station_abbreviated='19',
@@ -455,7 +467,7 @@ class TestSchedulerGeneratedData(TestCase):
             callback=TestSchedulerGeneratedData.request_callback_train_schedule,
             content_type='text/xml',)
 
-        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 01:30:00 AM')
         scheduler = train_scheduler.TrainSchedule()
         train_routes = scheduler.schedule(starting_station_abbreviated='11',
                                           ending_station_abbreviated='18',
@@ -481,7 +493,7 @@ class TestSchedulerGeneratedData(TestCase):
             callback=TestSchedulerGeneratedData.request_callback_train_schedule,
             content_type='text/xml',)
 
-        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 01:30:00 AM')
         scheduler = train_scheduler.TrainSchedule()
         train_routes = scheduler.schedule(starting_station_abbreviated='11',
                                           ending_station_abbreviated='2A',
@@ -507,7 +519,7 @@ class TestSchedulerGeneratedData(TestCase):
             callback=TestSchedulerGeneratedData.request_callback_train_schedule,
             content_type='text/xml',)
 
-        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 01:30:00 AM')
         scheduler = train_scheduler.TrainSchedule()
         train_routes = scheduler.schedule(starting_station_abbreviated='11',
                                           ending_station_abbreviated='19',
@@ -536,7 +548,7 @@ class TestSchedulerGeneratedData(TestCase):
             callback=TestSchedulerGeneratedData.request_callback_train_schedule,
             content_type='text/xml',)
 
-        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 01:30:00 AM')
         scheduler = train_scheduler.TrainSchedule()
         train_routes = scheduler.schedule(starting_station_abbreviated='11',
                                           ending_station_abbreviated='19',

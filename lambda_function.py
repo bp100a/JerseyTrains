@@ -3,6 +3,7 @@
 # pylint: disable-msg=R0911, W0401, R1705, W0613
 import re
 from datetime import datetime
+import pytz
 from models import cloudredis, setuplogging
 from controllers import train_scheduler
 from configuration import config
@@ -31,6 +32,8 @@ PROBLEM_WITH_ROUTE = "There was a problem with the routing information, please t
 
 
 def log(message: str) -> None:
+    if not setuplogging.LOGGING_HANDLER:
+        setuplogging.initialize_logging(mocking=True)
     setuplogging.LOGGING_HANDLER(message)
 
 
@@ -171,7 +174,9 @@ def next_train(request: dict, session: dict) -> dict:
         return response(speech_response(DESTINATION_INVALID.format(destination_station), True))
 
     # okay the start & destination are valid, so it's time to do some routing
-    current_time = datetime.now()
+    current_time = datetime.utcnow()
+    timezone = pytz.timezone('UTC')
+    current_time = timezone.localize(current_time)
     if 'time' in request['intent']:
         current_time = request['intent']['time']
     start_abbreviated = tso.train_stations(start_station)

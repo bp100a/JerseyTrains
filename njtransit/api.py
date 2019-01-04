@@ -2,6 +2,8 @@
 """an object for calling NJTransit's webservice interface"""
 import xml.etree.ElementTree as ET
 from http import HTTPStatus
+from dateutil import parser
+import pytz
 from datetime import datetime
 import json
 import requests
@@ -39,6 +41,14 @@ class NJTransitAPI:
         self.apikey = config.APIKEY
 
     @staticmethod
+    def to_ET(datetime_string: str) -> datetime:
+        """convert date/time string to Eastern Time"""
+        timezone = pytz.timezone("America/New_York")
+        d_naive = datetime.strptime(datetime_string, '%d-%b-%Y %I:%M:%S %p')
+        d_aware = timezone.localize(d_naive)
+        return d_aware
+
+    @staticmethod
     def parse_station_schedule(root: ET) -> list:
         """parse the XML element tree into a list of train schedules"""
         train_list = []
@@ -53,7 +63,7 @@ class NJTransitAPI:
                 elif item.tag == 'DESTINATION':
                     destination = item.text
                 elif item.tag == 'SCHED_DEP_DATE':
-                    departure = datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')
+                    departure = NJTransitAPI.to_ET(item.text)
                 elif item.tag == 'ITEM_INDEX':
                     index = int(item.text)
 
@@ -80,8 +90,7 @@ class NJTransitAPI:
                 elif item.tag == 'DESTINATION':
                     this_train.update({'destination': item.text})
                 elif item.tag == 'SCHED_DEP_DATE':
-                    this_train.update({'departure':
-                                           datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')})
+                    this_train.update({'departure': NJTransitAPI.to_ET(item.text)})
 
                 if 'departure' in this_train and \
                     'destination' in this_train and \
@@ -96,9 +105,7 @@ class NJTransitAPI:
                             elif stop.tag == 'TIME':
                                 if stop.text is None:
                                     continue  # skip this!
-                                this_stop.update({'time':
-                                                      datetime.strptime(stop.text,
-                                                                        '%d-%b-%Y %I:%M:%S %p')})
+                                this_stop.update({'time': NJTransitAPI.to_ET(stop.text)})
                             elif stop.tag == 'STOP_STATUS':
                                 this_stop.update({'status': stop.text})
                             elif stop.tag == 'DEPARTED':

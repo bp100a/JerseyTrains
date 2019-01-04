@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from unittest import TestCase
 import os
+import pytz
 from datetime import datetime
 from http import HTTPStatus
 from urllib import parse
@@ -11,6 +12,10 @@ from configuration import config
 
 def to_datetime(date_string: str) -> datetime:
     return datetime.strptime(date_string, '%d-%b-%Y %I:%M:%S %p')
+
+
+def utc_now() -> datetime:
+    return pytz.timezone('UTC').localize(datetime.utcnow())
 
 
 class TestTrainScheduler(TestCase):
@@ -65,7 +70,7 @@ class TestTrainScheduler(TestCase):
             content_type='text/xml',)
 
         scheduler = train_scheduler.TrainSchedule()
-        train_routes = scheduler.schedule(starting_station_abbreviated='CM', ending_station_abbreviated='NY', departure_time=datetime.now())
+        train_routes = scheduler.schedule(starting_station_abbreviated='CM', ending_station_abbreviated='NY', departure_time=utc_now())
 
         assert train_routes
 

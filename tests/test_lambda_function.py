@@ -1,7 +1,7 @@
 """testing for the AWS lambda function interface"""
 import os
 from datetime import datetime
-import responses
+import pytz
 from http import HTTPStatus
 import lambda_function
 import fakeredis
@@ -16,6 +16,13 @@ from tests.test_data_generator import TrainScheduleData, TestSchedulerGeneratedD
 
 def to_datetime(date_string: str) -> datetime:
     return datetime.strptime(date_string, '%d-%b-%Y %I:%M:%S %p')
+
+def to_ET(datetime_string: str) -> datetime:
+    """convert date/time string to Eastern Time"""
+    timezone = pytz.timezone("America/New_York")
+    d_naive = datetime.strptime(datetime_string, '%d-%b-%Y %I:%M:%S %p')
+    d_aware = timezone.localize(d_naive)
+    return d_aware
 
 
 class TestAWSlambda(TestwithMocking):
@@ -311,7 +318,7 @@ class TestAWSlambda(TestwithMocking):
         assert response['response']['outputSpeech']['text'] == lambda_function.HOME_STATION_SET.format(home_station)
 
         # now send intent with station routing
-        test_time = datetime.strptime('11-Dec-2018 01:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 01:30:00 AM')
         next_station_event = {
             "request": {"type": "IntentRequest", "intent": {"name": "NextTrain", "time": test_time,
                                                             "slots": {"station": {"value": destination_station}}}},
@@ -352,7 +359,7 @@ class TestAWSlambda(TestwithMocking):
         assert response['response']['outputSpeech']['text'] == lambda_function.HOME_STATION_SET.format(home_station)
 
         # now send intent with station routing
-        test_time = datetime.strptime('11-Dec-2018 02:30:00 AM', '%d-%b-%Y %I:%M:%S %p')
+        test_time = to_ET('11-Dec-2018 02:30:00 AM')
         next_station_event = {
             "request": {"type": "IntentRequest", "intent": {"name": "NextTrain", "time": test_time,
                                                             "slots": {"station": {"value": destination_station}}}},

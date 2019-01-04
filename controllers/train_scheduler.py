@@ -255,7 +255,7 @@ class TrainSchedule:
                         direct_trains.append(train)
                 else:
                     possible_indirect_trains.append(train)
-        except (KeyError, TypeError):
+        except (KeyError, TypeError) as e:
             raise
 
         # okay we have our direct routes, now we need to

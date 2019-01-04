@@ -4,6 +4,7 @@ fakeredis==0.13.1
 responses==0.10.4
 python-lambda-local==0.1.6
 redis==2.10.6
+pytz==2018.7
 
 
 

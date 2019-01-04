@@ -2,6 +2,7 @@
 """test for NJTransit API"""
 from unittest import TestCase
 import os
+from datetime import datetime
 import xml.etree.ElementTree as ET
 from http import HTTPStatus
 import responses
@@ -328,3 +329,11 @@ class TestNJTransitAPI(TestCase):
                 prospective_trains.append(train)
 
         assert len(prospective_trains) == 12
+
+    def test_time_conversion(self):
+
+        time_string = '11-Dec-2018 04:30:00 AM'
+
+        dt_ET = NJTransitAPI.to_ET(time_string)
+        dt_UTC = datetime.strptime(time_string, '%d-%b-%Y %I:%M:%S %p')
+        assert dt_ET != dt_UTC
