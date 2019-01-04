@@ -405,32 +405,32 @@ class TestAWSlambda(TestwithMocking):
         assert 'The next train from' in response['response']['outputSpeech']['text']
         assert 'with a transfer at' in response['response']['outputSpeech']['text']
 
-    @staticmethod
-    def test_live_lambda_next_train():
-        """Since the train scheduler calls the getTrainScheduleXML
-        api twice, we use a callback to provide the proper canned
-        responses"""
-        # set the home station
-        home_station = 'Chatham'
-        destination_station = 'New York'
-        set_home_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "SetHome",
-                                                            "slots": {"station": {"value": home_station}}}},
-            "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
-
-        fake_redis = fakeredis.FakeStrictRedis()
-        response = lambda_function.on_intent(request=set_home_event['request'],
-                                             session=set_home_event['session'],
-                                             fake_redis=fake_redis)
-        assert response['response']['outputSpeech']['text'] == lambda_function.HOME_STATION_SET.format(home_station)
-
-        # now send intent with station routing
-        next_station_event = {
-            "request": {"type": "IntentRequest", "intent": {"name": "NextTrain",
-                                                            "slots": {"station": {"value": destination_station}}}},
-            "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
-
-        response = lambda_function.on_intent(request=next_station_event['request'],
-                                             session=next_station_event['session'],
-                                             fake_redis=fake_redis)
-        assert response
+    # @staticmethod
+    # def test_live_lambda_next_train():
+    #     """Since the train scheduler calls the getTrainScheduleXML
+    #     api twice, we use a callback to provide the proper canned
+    #     responses"""
+    #     # set the home station
+    #     home_station = 'Chatham'
+    #     destination_station = 'New York'
+    #     set_home_event = {
+    #         "request": {"type": "IntentRequest", "intent": {"name": "SetHome",
+    #                                                         "slots": {"station": {"value": home_station}}}},
+    #         "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
+    #
+    #     fake_redis = fakeredis.FakeStrictRedis()
+    #     response = lambda_function.on_intent(request=set_home_event['request'],
+    #                                          session=set_home_event['session'],
+    #                                          fake_redis=fake_redis)
+    #     assert response['response']['outputSpeech']['text'] == lambda_function.HOME_STATION_SET.format(home_station)
+    #
+    #     # now send intent with station routing
+    #     next_station_event = {
+    #         "request": {"type": "IntentRequest", "intent": {"name": "NextTrain",
+    #                                                         "slots": {"station": {"value": destination_station}}}},
+    #         "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
+    #
+    #     response = lambda_function.on_intent(request=next_station_event['request'],
+    #                                          session=next_station_event['session'],
+    #                                          fake_redis=fake_redis)
+    #     assert response
