@@ -109,21 +109,10 @@ def next_train_indirect_response(start: str, destination: str, indirect_route: d
 
 
 def format_speech_time(train_time: datetime) -> str:
-    """format our time for speech. Note that Windows vs. Linux
-    have different formatting for leading zero suppression, so
-    easier to skip using strftime and just format it myself"""
-
-    minute_str = ' '
-    if train_time.minute < 10:
-        if train_time.minute > 0:
-            minute_str = ' <say-as interpret-as="spell-out">O</say-as>{0} '.format(train_time.minute)
-    else:
-        minute_str = ' {0} '.format(train_time.minute)
-
+    """format our time for speech. """
     if train_time.hour > 12:
-        return '{0}'.format(train_time.hour - 12) + minute_str + '<say-as interpret-as="spell-out">PM</say-as>'
-
-    return '{0}'.format(train_time.hour) + minute_str + '<say-as interpret-as="spell-out">AM</say-as>'
+        return '{0}:{1:02d}'.format(train_time.hour - 12, train_time.minute) + ' PM'
+    return '{0}:{1:02d}'.format(train_time.hour, train_time.minute) + ' AM'
 
 
 def next_train_direct_response(start: str, destination: str, direct_route: dict) -> dict:

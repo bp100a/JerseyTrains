@@ -150,15 +150,15 @@ class TestAWSlambda(TestwithMocking):
 
         test_time = datetime.strptime('11-Dec-2018 01:00:00 AM', '%d-%b-%Y %I:%M:%S %p')
         speech_time = lambda_function.format_speech_time(test_time)
-        assert speech_time == '1 <say-as interpret-as="spell-out">AM</say-as>'
+        assert speech_time == '1:00 AM'
 
         test_time = datetime.strptime('11-Dec-2018 03:05:00 PM', '%d-%b-%Y %I:%M:%S %p')
         speech_time = lambda_function.format_speech_time(test_time)
-        assert speech_time == '3 <say-as interpret-as="spell-out">O</say-as>5 <say-as interpret-as="spell-out">PM</say-as>'
+        assert speech_time == '3:05 PM'
 
         test_time = datetime.strptime('11-Dec-2018 12:10:00 PM', '%d-%b-%Y %I:%M:%S %p')
         speech_time = lambda_function.format_speech_time(test_time)
-        assert speech_time == '12 10 <say-as interpret-as="spell-out">AM</say-as>'
+        assert speech_time == '12:10 AM'
 
     @staticmethod
     def request_callback_station_list(request):
@@ -325,9 +325,8 @@ class TestAWSlambda(TestwithMocking):
             "session": {"new": False, "user": {"userId": "bogus_user_id"}}}
 
         response = lambda_function.lambda_handler(event=next_station_event, context=None)
-        expected_response = '<speak>The next train from Line 1 Station 1 to Line 1 Station '\
-                            '9 will leave at 2 <say-as interpret-as="spell-out">AM</say-as> and'\
-                            ' arrive at 5 <say-as interpret-as="spell-out">AM</say-as></speak>'
+        expected_response = '<speak>The next train from Line 1 Station 1 to Line 1 Station 9' + \
+                            ' will leave at 2:00 AM and arrive at 5:00 AM</speak>'
         assert response['response']['outputSpeech']['ssml'] == expected_response
 
     @responses.activate
