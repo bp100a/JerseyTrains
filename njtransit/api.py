@@ -2,9 +2,8 @@
 """an object for calling NJTransit's webservice interface"""
 import xml.etree.ElementTree as ET
 from http import HTTPStatus
-from dateutil import parser
 import pytz
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import requests
 from configuration import config
@@ -91,10 +90,13 @@ class NJTransitAPI:
                     this_train.update({'destination': item.text})
                 elif item.tag == 'SCHED_DEP_DATE':
                     this_train.update({'departure': NJTransitAPI.to_ET(item.text)})
+                elif item.tag == 'ITEM_INDEX':
+                    this_train.update({'index': int(item.text)})
 
                 if 'departure' in this_train and \
                     'destination' in this_train and \
-                    'tid' in this_train:
+                    'tid' in this_train and \
+                    'index' in this_train:
                     stop_list = {}
                     for stops in items.iter('STOP'):
                         this_stop = {}
@@ -199,7 +201,7 @@ class NJTransitAPI:
                 train_id = stop_list['Train_ID']
                 new_stop_list = []
                 for stop in stop_list['STOPS']['STOP']:
-                    flat_stop = {stop['NAME']: {'time': stop['TIME'],
+                    flat_stop = {stop['NAME']: {'time': NJTransitAPI.to_ET(stop['TIME']),
                                                 'departed': stop['DEPARTED'],
                                                 'status': stop['STOP_STATUS']}}
                     new_stop_list.append(flat_stop)
@@ -211,6 +213,28 @@ class NJTransitAPI:
             raise
 
         return {}
+
+    def station_schedule_with_stops(self, station_abbreviation: str, departure_time: datetime) -> list:
+        """return the station schedule with the stops for each train"""
+        station_schedule = self.station_schedule(station_abbreviation)
+
+        # now get the stop information
+        for train in station_schedule:
+            # save some time by not fetching trains
+            # that have already departed
+            if train['time'] < departure_time or train['departed'] == 'YES':
+                continue
+
+            # if the train is too far in future, ignore it as well
+            if train['time'] > departure_time + timedelta(hours=3):
+                continue
+
+            train_id = train['tid']
+            stop_list = self.train_stops(train_id)
+            if stop_list:
+                train['stops'] = stop_list[train_id]
+
+        return station_schedule
 
     __train_stations = {}  # our private list of train stations
 

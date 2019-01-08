@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """ Jersey Trains Alexa Skill! Returns the NJTransit train information """
 # pylint: disable-msg=R0911, W0401, R1705, W0613
-import re
 from datetime import datetime
 import pytz
 from models import cloudredis, setuplogging

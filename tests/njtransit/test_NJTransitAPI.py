@@ -2,6 +2,7 @@
 """test for NJTransit API"""
 from unittest import TestCase
 import os
+import pytz
 from datetime import datetime
 import xml.etree.ElementTree as ET
 from http import HTTPStatus
@@ -17,8 +18,8 @@ class TestNJTransitAPI(TestCase):
     def create_tst_object() -> NJTransitAPI:
         """create the NJTransit object with sign-in"""
         njt = NJTransitAPI()
-        njt.username = 'bp100a'
-        njt.apikey = 'KT9yyHu9VqdW1H'
+        njt.username = config.USERNAME
+        njt.apikey = config.APIKEY
         return njt
 
     @staticmethod
@@ -337,3 +338,12 @@ class TestNJTransitAPI(TestCase):
         dt_ET = NJTransitAPI.to_ET(time_string)
         dt_UTC = datetime.strptime(time_string, '%d-%b-%Y %I:%M:%S %p')
         assert dt_ET != dt_UTC
+
+    # def test_live_schedule_with_stops(self):
+    #
+    #     njt = TestNJTransitAPI.create_tst_object()
+    #     current_time = datetime.utcnow()
+    #     timezone = pytz.timezone('UTC')
+    #     current_time = timezone.localize(current_time)
+    #     schedules = njt.station_schedule_with_stops(station_abbreviation='CM', departure_time=current_time)
+    #     assert schedules

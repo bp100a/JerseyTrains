@@ -69,7 +69,7 @@ class TrainSchedule:
 
     def schedule_indirect_routes(self, possible_indirect_trains: list,
                                  starting_station: str,
-                                 ending_station: str,
+                                 ending_station_abbreviated: str,
                                  departure_time: datetime,
                                  test_argument: str) -> list:
         """inspect the trains that originate from starting station but don't
@@ -77,15 +77,17 @@ class TrainSchedule:
         to another line that will get us to the destination
         :param possible_indirect_trains - list of trains that start but don't end
         :param starting_station - full name of station we are leaving from
-        :param ending_station - full name of station we wish to travel to
+        :param ending_station_abbreviated - short name of station we wish to travel to
         :param departure_time - when we can get to start station
         :param test_argument - name of our test data for mocking input
         :return list of indirect train routes
         """
         # let's get all trains that will be at our
         # ending station, using abbreviated name
-        ending_station_trains = self.njt.train_schedule(ending_station,
+        ending_station_trains = self.njt.train_schedule(ending_station_abbreviated,
                                                         test_argument)
+
+        ending_station = self.train_stations(ending_station_abbreviated)
 
         # we are looking for all routes where there's an intersection
         # between the 'possible_indirect_trains' and this list.
@@ -265,7 +267,7 @@ class TrainSchedule:
 
         transfer_routes = self.schedule_indirect_routes(possible_indirect_trains,
                                                         starting_station_name,
-                                                        ending_station_name,
+                                                        ending_station_abbreviated,
                                                         departure_time,
                                                         test_argument)
 
