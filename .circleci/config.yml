@@ -30,6 +30,7 @@ jobs:
       - run:
           name: upgrade pip
           command: |
+            python3 -m venv venv
             . venv/bin/activate
             pip install --upgrade pip
 
@@ -47,7 +48,9 @@ jobs:
             pip install nose
             pip install --quiet pylint
             pip install --quiet nosexcover
-
+      - run:
+          name: create config.py
+          command: sh ./config.sh
       - save_cache:
           paths:
             - ./venv
@@ -61,7 +64,7 @@ jobs:
           command: |
             . venv/bin/activate
             mkdir test-reports
-            nosetests --with-xcoverage --with-xunit --cover-package=models --cover-package=controllers --cover-package=lambda_function.py --cover-erase --cover-branches --xcoverage-file=test-reports/coverage.xml --xunit-file=test-reports/nosetests.xml
+            nosetests --verbose --cover-branches --with-xcoverage --with-xunit --cover-package=models --cover-package=controllers --cover-package=lambda_function --cover-package=njtransit --cover-erase --cover-branches --xcoverage-file=test-reports/coverage.xml --xunit-file=test-reports/nosetests.xml
             # mv .coverage test-reports/.coverage
 
             # PyLint returns
@@ -106,14 +109,18 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
-
       - save_cache:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
           name: create config.py
-          command: sh ./config.sh
+          command: |
+            sh ./config.sh
+            cat configuration/prod_config.py
+            mv -f configuration/prod_config.py configuration/config.py
+            echo "configuration post copy"
+            cat configuration/config.py
       - run:
           name: create lambda image
           command: |
@@ -121,6 +128,8 @@ jobs:
             cp -r ./venv/lib/python3.6/site-packages/* ./lambda_deploy
             cp -v -r controllers lambda_deploy
             cp -v -r models lambda_deploy
+            cp -v -r njtransit lambda_deploy
+            cp -v -r configuration lambda_deploy
             cp *.py lambda_deploy
       - run:
           name: remove unnecessary modules
@@ -129,11 +138,9 @@ jobs:
             rm -r lambda_deploy/pip*
             rm -r lambda_deploy/nose*
             rm -r lambda_deploy/python_lambda_local*.egg-info
-            rm -r lambda_deploy/waitress*
             rm -r lambda_deploy/fakeredis*
             rm -r lambda_deploy/coverage*
             rm -r lambda_deploy/codecov*
-            rm -r lambda_deploy/requests_mock*
             rm lambda_deploy/*.so
             rm -r lambda_deploy/__pycache__
             rm -r lambda_deploy/docutils*
@@ -144,11 +151,14 @@ jobs:
             rm -r lambda_deploy/mccabe*
             rm lambda_deploy/easy_install*
             rm -r lambda_deploy/six*
+            rm lambda_deploy/responses.py
+            rm lambda_deploy/test_responses.py
+            rm -r lambda_deploy/lambda_local*
       - run:
           name: zip up the package
           command: |
             cd lambda_deploy
-            zip -r ../TapList.zip *
+            zip -r ../JerseyTrains.zip *
       - run:
           name: Install AWS client
           command: sudo pip install awscli

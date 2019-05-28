@@ -1,5 +1,7 @@
 """Here's where we manage logging"""
 import logging
+from configuration import config
+
 
 LOGGING_HANDLER = None
 AWS_LOGGER = None
@@ -26,10 +28,10 @@ def initialize_logging(mocking=True):
 
 def prod_logging_handler(log_string: str) -> None:
     """where all things production go, logged to CloudWatch"""
-    AWS_LOGGER.info(log_string)
+    AWS_LOGGER.info('[BUILD#{0}] '.format(config.BUILD_NUMBER) + log_string)
 
 
 def mock_logging_handler(log_string: str) -> None:
     """where all testing/debugging goes"""
     global MOCK_LOG # pylint:disable=W0603
-    MOCK_LOG = log_string
+    MOCK_LOG = '[BUILD#{0}] '.format(config.BUILD_NUMBER) + log_string

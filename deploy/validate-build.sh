@@ -6,20 +6,18 @@
 #   validate_build.sh
 #
 
-aws lambda invoke --invocation-type RequestResponse --function-name JerseyTrains --qualifier STAGE --region us-east-1 --payload file://tests/data/ListBreweries.json ListBreweries.out
-if ! grep -q 'Here are the breweries I know' ListBreweries.out; then
+# perform some simple validations
+
+aws lambda invoke --invocation-type RequestResponse --function-name JerseyTrains --qualifier STAGE --region us-east-1 --payload file://tests/data/SetHomeStation.JSON SetHomeStation.out
+if ! grep -q 'Your home station has been set to' SetHomeStation.out; then
+   cat SetHomeStation.out
    exit 1
 fi
 
-aws lambda invoke --invocation-type RequestResponse --function-name JerseyTrains --qualifier STAGE --region us-east-1 --payload file://tests/data/GetTapListIntent_TwinElephant.json TwinElephant.out
-if ! grep -q 'on tap at Twin Elephant' TwinElephant.out; then
+aws lambda invoke --invocation-type RequestResponse --function-name JerseyTrains --qualifier STAGE --region us-east-1 --payload file://tests/data/GetHomeStation.JSON GetHomeStation.out
+if ! grep -q 'Your current home station is' GetHomeStation.out; then
+   cat GetHomeStation.out
    exit 2
-fi
-
-aws lambda invoke --invocation-type RequestResponse --function-name JerseyTrains --qualifier STAGE --region us-east-1 --payload file://tests/data/GetTapListIntent_Alementary.json Alementary.out
-if ! grep -q 'on tap at Alementary' Alementary.out; then
-   cat Alementary.out
-   exit 3
 fi
 
 # nothing wrong, clean exit

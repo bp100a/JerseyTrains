@@ -2,6 +2,7 @@
 """orchestration for our train schedules"""
 from datetime import datetime, timedelta
 from njtransit import api
+from models import cloudredis
 
 
 class TrainSchedule:
@@ -68,7 +69,7 @@ class TrainSchedule:
 
     def schedule_indirect_routes(self, possible_indirect_trains: list,
                                  starting_station: str,
-                                 ending_station: str,
+                                 ending_station_abbreviated: str,
                                  departure_time: datetime,
                                  test_argument: str) -> list:
         """inspect the trains that originate from starting station but don't
@@ -76,15 +77,17 @@ class TrainSchedule:
         to another line that will get us to the destination
         :param possible_indirect_trains - list of trains that start but don't end
         :param starting_station - full name of station we are leaving from
-        :param ending_station - full name of station we wish to travel to
+        :param ending_station_abbreviated - short name of station we wish to travel to
         :param departure_time - when we can get to start station
         :param test_argument - name of our test data for mocking input
         :return list of indirect train routes
         """
         # let's get all trains that will be at our
         # ending station, using abbreviated name
-        ending_station_trains = self.njt.train_schedule(ending_station,
+        ending_station_trains = self.njt.train_schedule(ending_station_abbreviated,
                                                         test_argument)
+
+        ending_station = self.train_stations(ending_station_abbreviated)
 
         # we are looking for all routes where there's an intersection
         # between the 'possible_indirect_trains' and this list.
@@ -94,6 +97,9 @@ class TrainSchedule:
             for transfer_train in ending_station_trains:
                 if starting_station in transfer_train['stops']:
                     continue  # already have this in direct route
+                arrival_time = transfer_train['stops'][ending_station]['time']
+                if arrival_time <= departure_time:
+                    continue
 
                 # we need to find the intersection of the 'start_train'
                 # and our tentative 'transfer_train'
@@ -102,16 +108,17 @@ class TrainSchedule:
                     # if this is the starting station, skip
                     if start_stations == starting_station:
                         continue
-                    # ignore trains that have already left
-                    if start_train['stops'][start_stations]['time'] < departure_time:
+
+                    # ignore trains that have already left or going in wrong direction
+                    start_time = start_train['stops'][start_stations]['time']
+                    if start_time < departure_time or start_time >= arrival_time:
                         continue
                     # if intersection station isn't in transfer train, skip
                     if start_stations not in transfer_train['stops']:
                         continue
                     transfer_station = transfer_train['stops'][start_stations]
-
                     # to transfer, the transfer has to arrive after the intersection train
-                    if transfer_station['time'] < start_train['stops'][start_stations]['time']:
+                    if transfer_station['time'] <= start_time:
                         continue  # no time
 
                     # make sure the transfer train is going the correct direction!!
@@ -133,6 +140,86 @@ class TrainSchedule:
         # remove any redundant routes from the list
         return TrainSchedule.optimize_indirect_routes(transfer_routes, ending_station)
 
+    @staticmethod
+    def best_route(starting_station_name: str, ending_station_name: str, routes: dict) -> dict:
+        """
+        Given a set of direct & indirect routes, find the *best* route:
+
+            find the *best* direct train. Best means
+            it arrives at the destination the earliest.
+            if more than one arrives at the destination at
+            the same time, take the one that leaves the
+            start station the latest
+
+        :param self:
+        :param starting_station_name: starting station (not abbreviation)
+        :param ending_station_name: destination station (not abbreviation)
+        :param routes: dictionary of {'direct':[], 'indirect':[]}, can be empty
+        :return: dictionary, either {'direct':[]} or {'indirect':[]}
+        """
+
+        # simple case of empty schedule
+        if 'direct' not in routes and 'indirect' not in routes:
+            return {}
+
+        best_direct_train = {}
+        if 'direct' in routes:
+            leaves = None
+            arrives = None
+            for train in routes['direct']:
+                if leaves is None:
+                    leaves = train['stops'][starting_station_name]['time']
+                if arrives is None:
+                    arrives = train['stops'][ending_station_name]['time']
+                    best_direct_train = train
+                if best_direct_train != train:
+                    if arrives == train['stops'][ending_station_name]['time']:
+                        if leaves < train['stops'][starting_station_name]['time']:
+                            best_direct_train = train
+                            leaves = train['stops'][ending_station_name]['time']
+
+                    if arrives > train['stops'][ending_station_name]['time']:
+                        best_direct_train = train
+                        arrives = train['stops'][ending_station_name]['time']
+
+        # now find the best indirect, same criteria as the best direct
+        best_indirect_train = {}
+        if 'indirect' in routes:
+            leaves = None
+            arrives = None
+            for train in routes['indirect']:
+                if leaves is None:
+                    leaves = train['start']['stops'][starting_station_name]['time']
+                if arrives is None:
+                    arrives = train['transfer']['stops'][ending_station_name]['time']
+                    best_indirect_train = train
+                if best_indirect_train != train:
+                    if arrives == train['transfer']['stops'][ending_station_name]['time']:
+                        if leaves < train['start']['stops'][starting_station_name]['time']:
+                            best_indirect_train = train
+                            leaves = train['transfer']['stops'][ending_station_name]['time']
+
+                    if arrives > train['transfer']['stops'][ending_station_name]['time']:
+                        best_indirect_train = train
+                        arrives = train['transfer']['stops'][ending_station_name]['time']
+
+        if best_direct_train and not best_indirect_train:
+            return {'direct': best_direct_train}
+        if best_indirect_train and not best_direct_train:
+            return {'indirect': best_indirect_train}
+
+        # this would be very strange indeed
+        if not best_direct_train and not best_direct_train:
+            return {}
+
+        # TBD: should we worry about 'ties' at the destination and look for latest
+        # leaving starting station?
+        if best_indirect_train['transfer']['stops'][ending_station_name]['time'] < \
+                best_direct_train['stops'][ending_station_name]['time']:
+            return {'indirect': best_indirect_train}
+
+        return {'direct': best_direct_train}
+
     def schedule(self, starting_station_abbreviated: str,
                  ending_station_abbreviated:
                  str, departure_time: datetime,
@@ -145,7 +232,8 @@ class TrainSchedule:
 
         # lookup schedule with abbreviated name
         starting_station_trains = self.njt.train_schedule(
-            self.njt.train_stations[starting_station_abbreviated], test_argument)
+            starting_station_abbreviated,
+            test_argument)
 
         # easy stuff first, direct routes where
         # the train goes directly to the ending station
@@ -159,15 +247,18 @@ class TrainSchedule:
             for train in starting_station_trains:
                 if starting_station_name not in train['stops']:  # weird case to catch
                     continue
-                if train['stops'][starting_station_name]\
-                ['time'] < departure_time:
+                start_time = train['stops'][starting_station_name]['time']
+                if start_time < departure_time:
                     continue
                 if ending_station_name in train['stops']:
-                    direct_trains.append(train)
+                    arrival_time = train['stops'][ending_station_name]['time']
+                    if arrival_time > departure_time and \
+                            arrival_time > start_time:
+                        direct_trains.append(train)
                 else:
                     possible_indirect_trains.append(train)
-        except KeyError as dict_key_error:
-            print(dict_key_error.__str__())
+        except (KeyError, TypeError) as e:
+            raise
 
         # okay we have our direct routes, now we need to
         # look for indirect routes. We created a list
@@ -176,8 +267,31 @@ class TrainSchedule:
 
         transfer_routes = self.schedule_indirect_routes(possible_indirect_trains,
                                                         starting_station_name,
-                                                        ending_station_name,
+                                                        ending_station_abbreviated,
                                                         departure_time,
                                                         test_argument)
 
         return {'direct': direct_trains, 'indirect': transfer_routes}
+
+
+class ScheduleUser:
+    """Perform user-specific actions """
+    @staticmethod
+    def get_home_station(user_id: str) -> str:
+        """get the home station, if set"""
+        home_key = cloudredis.home_key(user_id)
+        if not cloudredis.REDIS_SERVER.exists(home_key):
+            return ''
+
+        return cloudredis.REDIS_SERVER.get(home_key).decode('utf-8')
+
+    @staticmethod
+    def set_home_station(station: str, user_id: str) -> bool:
+        """set a home station. Make sure it's a valid station"""
+        ts = TrainSchedule()
+        if not ts.validate_station_name(station):
+            return False
+
+        cloudredis.REDIS_SERVER.set(cloudredis.home_key(user_id), station)
+        return True
+

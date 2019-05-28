@@ -2,7 +2,8 @@
 """an object for calling NJTransit's webservice interface"""
 import xml.etree.ElementTree as ET
 from http import HTTPStatus
-from datetime import datetime
+import pytz
+from datetime import datetime, timedelta
 import json
 import requests
 from configuration import config
@@ -39,6 +40,14 @@ class NJTransitAPI:
         self.apikey = config.APIKEY
 
     @staticmethod
+    def to_ET(datetime_string: str) -> datetime:
+        """convert date/time string to Eastern Time"""
+        timezone = pytz.timezone("America/New_York")
+        d_naive = datetime.strptime(datetime_string, '%d-%b-%Y %I:%M:%S %p')
+        d_aware = timezone.localize(d_naive)
+        return d_aware
+
+    @staticmethod
     def parse_station_schedule(root: ET) -> list:
         """parse the XML element tree into a list of train schedules"""
         train_list = []
@@ -53,7 +62,7 @@ class NJTransitAPI:
                 elif item.tag == 'DESTINATION':
                     destination = item.text
                 elif item.tag == 'SCHED_DEP_DATE':
-                    departure = datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')
+                    departure = NJTransitAPI.to_ET(item.text)
                 elif item.tag == 'ITEM_INDEX':
                     index = int(item.text)
 
@@ -80,12 +89,14 @@ class NJTransitAPI:
                 elif item.tag == 'DESTINATION':
                     this_train.update({'destination': item.text})
                 elif item.tag == 'SCHED_DEP_DATE':
-                    this_train.update({'departure':
-                                           datetime.strptime(item.text, '%d-%b-%Y %I:%M:%S %p')})
+                    this_train.update({'departure': NJTransitAPI.to_ET(item.text)})
+                elif item.tag == 'ITEM_INDEX':
+                    this_train.update({'index': int(item.text)})
 
                 if 'departure' in this_train and \
                     'destination' in this_train and \
-                    'tid' in this_train:
+                    'tid' in this_train and \
+                    'index' in this_train:
                     stop_list = {}
                     for stops in items.iter('STOP'):
                         this_stop = {}
@@ -96,9 +107,7 @@ class NJTransitAPI:
                             elif stop.tag == 'TIME':
                                 if stop.text is None:
                                     continue  # skip this!
-                                this_stop.update({'time':
-                                                      datetime.strptime(stop.text,
-                                                                        '%d-%b-%Y %I:%M:%S %p')})
+                                this_stop.update({'time': NJTransitAPI.to_ET(stop.text)})
                             elif stop.tag == 'STOP_STATUS':
                                 this_stop.update({'status': stop.text})
                             elif stop.tag == 'DEPARTED':
@@ -140,7 +149,7 @@ class NJTransitAPI:
                 return NJTransitAPI.parse_train_schedule(root)
 
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError:
             raise
 
@@ -168,7 +177,7 @@ class NJTransitAPI:
                 return NJTransitAPI.parse_station_schedule(root)
 
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError as perr:
             raise
 
@@ -192,18 +201,40 @@ class NJTransitAPI:
                 train_id = stop_list['Train_ID']
                 new_stop_list = []
                 for stop in stop_list['STOPS']['STOP']:
-                    flat_stop = {stop['NAME']: {'time': stop['TIME'],
+                    flat_stop = {stop['NAME']: {'time': NJTransitAPI.to_ET(stop['TIME']),
                                                 'departed': stop['DEPARTED'],
                                                 'status': stop['STOP_STATUS']}}
                     new_stop_list.append(flat_stop)
 
                 return {train_id: new_stop_list}
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError:
             raise
 
         return {}
+
+    def station_schedule_with_stops(self, station_abbreviation: str, departure_time: datetime) -> list:
+        """return the station schedule with the stops for each train"""
+        station_schedule = self.station_schedule(station_abbreviation)
+
+        # now get the stop information
+        for train in station_schedule:
+            # save some time by not fetching trains
+            # that have already departed
+            if train['time'] < departure_time or train['departed'] == 'YES':
+                continue
+
+            # if the train is too far in future, ignore it as well
+            if train['time'] > departure_time + timedelta(hours=3):
+                continue
+
+            train_id = train['tid']
+            stop_list = self.train_stops(train_id)
+            if stop_list:
+                train['stops'] = stop_list[train_id]
+
+        return station_schedule
 
     __train_stations = {}  # our private list of train stations
 
@@ -259,7 +290,7 @@ class NJTransitAPI:
                 return station_stops
 
         except requests.RequestException as err:
-            print(err.__str__())
+            raise
         except ET.ParseError:
             raise
 

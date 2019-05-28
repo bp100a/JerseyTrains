@@ -24,10 +24,20 @@ class TestRedis(TestCase):
         assert redis_password == 'bogus.redis.password'
         assert redis_port == 14405
 
-    def test_redis_initialize(self):
+    def test_redis_initialize_fake(self):
         fake = fakeredis.FakeStrictRedis()
         cloudredis.initialize_cloud_redis(injected_server=fake)
         assert cloudredis.REDIS_SERVER == fake
+
+    def test_redis_initialize(self):
+        cloudredis.REDIS_SERVER = None
+        cloudredis.initialize_cloud_redis(injected_server=None)
+        assert cloudredis.REDIS_SERVER
+
+    def test_redis_initialize_subsequent(self):
+        cloudredis.REDIS_SERVER = 'foobar'
+        cloudredis.initialize_cloud_redis(injected_server=None)
+        assert cloudredis.REDIS_SERVER == 'foobar'
 
     def test_redis_cache_station_list(self):
         fake = fakeredis.FakeStrictRedis()
