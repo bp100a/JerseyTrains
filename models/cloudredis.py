@@ -2,6 +2,8 @@
 import redis
 from configuration import config
 from ast import literal_eval
+import json
+
 
 REDIS_SERVER = None
 
@@ -50,7 +52,7 @@ def exists(redis_key: str) -> bool:
 
 def cache_station_list(stations: dict) -> None:
     """Cache the station list"""
-    REDIS_SERVER.set('station_list', stations)
+    REDIS_SERVER.set('station_list', json.dumps(stations))
 
 
 def station_list() -> dict:

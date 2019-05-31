@@ -1,10 +1,10 @@
-requests>=2.20.0
+requests==2.22.0
 pylint==2.3.1
-fakeredis==0.13.1
-responses==0.10.4
+fakeredis==1.0.3
+responses==0.10.6
 python-lambda-local==0.1.6
-redis==2.10.6
-pytz==2018.7
+redis==3.2.1
+pytz==2019.1
 
 
 
