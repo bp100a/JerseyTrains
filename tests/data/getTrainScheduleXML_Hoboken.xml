@@ -1,0 +1,2131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<STATION>
+  <STATION_2CHAR>HB</STATION_2CHAR>
+  <STATIONNAME>Hoboken</STATIONNAME>
+  <ITEMS>
+    <ITEM>
+      <ITEM_INDEX>0</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 03:17:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Waldwick -SEC</DESTINATION>
+      <TRACK>12</TRACK>
+      <LINE>Bergen County Line</LINE>
+      <TRAIN_ID>1873</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>05-Jan-2019 02:24:39 PM</LAST_MODIFIED>
+      <BACKCOLOR>Silver</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>silver</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>05-Jan-2019 02:24:38 PM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>BERG</LINEABBREVIATION>
+      <INLINEMSG>Please note track change</INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 03:17:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 03:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rutherford</NAME>
+          <TIME>05-Jan-2019 03:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wesmont</NAME>
+          <TIME>05-Jan-2019 03:38:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Garfield</NAME>
+          <TIME>05-Jan-2019 03:41:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Plauderville</NAME>
+          <TIME>05-Jan-2019 03:44:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Broadway-Fl</NAME>
+          <TIME>05-Jan-2019 03:49:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Radburn-Fl</NAME>
+          <TIME>05-Jan-2019 03:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Boro</NAME>
+          <TIME>05-Jan-2019 03:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 04:00:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 04:04:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 04:08:15 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>1</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 03:25:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Suffern -SEC</DESTINATION>
+      <TRACK>11</TRACK>
+      <LINE>Main Line</LINE>
+      <TRAIN_ID>1723</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>05-Jan-2019 12:41:45 PM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>05-Jan-2019 12:41:43 PM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MAIN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 03:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 03:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Kingsland</NAME>
+          <TIME>05-Jan-2019 03:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Lyndhurst</NAME>
+          <TIME>05-Jan-2019 03:43:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Delawanna</NAME>
+          <TIME>05-Jan-2019 03:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Passaic</NAME>
+          <TIME>05-Jan-2019 03:48:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Clifton</NAME>
+          <TIME>05-Jan-2019 03:52:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Paterson</NAME>
+          <TIME>05-Jan-2019 03:58:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hawthorne</NAME>
+          <TIME>05-Jan-2019 04:03:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Main</NAME>
+          <TIME>05-Jan-2019 04:06:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 04:10:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 04:14:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 04:17:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Allendale</NAME>
+          <TIME>05-Jan-2019 04:22:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey</NAME>
+          <TIME>05-Jan-2019 04:26:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey Rt 17</NAME>
+          <TIME>05-Jan-2019 04:29:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mahwah</NAME>
+          <TIME>05-Jan-2019 04:32:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Suffern</NAME>
+          <TIME>05-Jan-2019 04:39:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>2</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 03:29:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Spring Valley -SEC</DESTINATION>
+      <TRACK>10</TRACK>
+      <LINE>Pascack Valley Line</LINE>
+      <TRAIN_ID>2117</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>05-Jan-2019 02:41:34 PM</LAST_MODIFIED>
+      <BACKCOLOR>Purple </BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>05-Jan-2019 02:41:33 PM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>PASC</LINEABBREVIATION>
+      <INLINEMSG>Please note track change</INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 03:29:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 03:38:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Pearl River</NAME>
+          <TIME>05-Jan-2019 04:08:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Nanuet</NAME>
+          <TIME>05-Jan-2019 04:17:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Spring Valley</NAME>
+          <TIME>05-Jan-2019 04:25:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>3</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 04:04:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Port Jervis -SEC</DESTINATION>
+      <TRACK> </TRACK>
+      <LINE>Bergen County Line</LINE>
+      <TRAIN_ID>77</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>05-Jan-2019 12:42:05 PM</LAST_MODIFIED>
+      <BACKCOLOR>Silver</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>silver</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>05-Jan-2019 12:42:03 PM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>BERG</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 04:04:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 04:13:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey</NAME>
+          <TIME>05-Jan-2019 04:40:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey Rt 17</NAME>
+          <TIME>05-Jan-2019 04:43:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Suffern</NAME>
+          <TIME>05-Jan-2019 04:48:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Sloatsburg</NAME>
+          <TIME>05-Jan-2019 04:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Tuxedo</NAME>
+          <TIME>05-Jan-2019 05:00:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Harriman</NAME>
+          <TIME>05-Jan-2019 05:10:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Salisbury Mls</NAME>
+          <TIME>05-Jan-2019 05:23:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Campbell Hall</NAME>
+          <TIME>05-Jan-2019 05:35:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Middletown NY</NAME>
+          <TIME>05-Jan-2019 05:42:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Otisville</NAME>
+          <TIME>05-Jan-2019 05:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Port Jervis</NAME>
+          <TIME>05-Jan-2019 06:17:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>4</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 04:08:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Bay Street</DESTINATION>
+      <TRACK> </TRACK>
+      <LINE>Montclair-Boonton Line</LINE>
+      <TRAIN_ID>531</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 04:45:48 PM</LAST_MODIFIED>
+      <BACKCOLOR>brown</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MNBTN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 04:08:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>05-Jan-2019 04:26:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Watsessing Ave</NAME>
+          <TIME>05-Jan-2019 04:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bloomfield</NAME>
+          <TIME>05-Jan-2019 04:40:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Ridge</NAME>
+          <TIME>05-Jan-2019 04:42:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bay Street</NAME>
+          <TIME>05-Jan-2019 04:45:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>5</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 04:13:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Spring Valley -SEC</DESTINATION>
+      <TRACK>3</TRACK>
+      <LINE>Pascack Valley Line</LINE>
+      <TRAIN_ID>2119</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>05-Jan-2019 02:20:54 PM</LAST_MODIFIED>
+      <BACKCOLOR>Purple </BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>05-Jan-2019 02:20:52 PM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>PASC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 04:13:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 04:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wood-Ridge</NAME>
+          <TIME>05-Jan-2019 04:32:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Essex Street</NAME>
+          <TIME>05-Jan-2019 04:37:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Anderson St.</NAME>
+          <TIME>05-Jan-2019 04:40:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Bridge Ldg</NAME>
+          <TIME>05-Jan-2019 04:48:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>River Edge</NAME>
+          <TIME>05-Jan-2019 04:52:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Oradell</NAME>
+          <TIME>05-Jan-2019 04:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Emerson</NAME>
+          <TIME>05-Jan-2019 04:58:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Westwood</NAME>
+          <TIME>05-Jan-2019 05:01:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hillsdale</NAME>
+          <TIME>05-Jan-2019 05:04:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Park Ridge</NAME>
+          <TIME>05-Jan-2019 05:09:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Montvale</NAME>
+          <TIME>05-Jan-2019 05:11:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Pearl River</NAME>
+          <TIME>05-Jan-2019 05:14:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Nanuet</NAME>
+          <TIME>05-Jan-2019 05:19:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Spring Valley</NAME>
+          <TIME>05-Jan-2019 05:26:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>6</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 04:17:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Waldwick -SEC</DESTINATION>
+      <TRACK> </TRACK>
+      <LINE>Bergen County Line</LINE>
+      <TRAIN_ID>1875</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 05:06:22 PM</LAST_MODIFIED>
+      <BACKCOLOR>Silver</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>silver</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>BERG</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 04:17:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 04:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rutherford</NAME>
+          <TIME>05-Jan-2019 04:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wesmont</NAME>
+          <TIME>05-Jan-2019 04:38:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Garfield</NAME>
+          <TIME>05-Jan-2019 04:41:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Plauderville</NAME>
+          <TIME>05-Jan-2019 04:44:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Broadway-Fl</NAME>
+          <TIME>05-Jan-2019 04:49:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Radburn-Fl</NAME>
+          <TIME>05-Jan-2019 04:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Boro</NAME>
+          <TIME>05-Jan-2019 04:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 05:00:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 05:04:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 05:07:15 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>7</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 04:25:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Suffern -SEC</DESTINATION>
+      <TRACK>5</TRACK>
+      <LINE>Main Line</LINE>
+      <TRAIN_ID>1725</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 05:39:46 PM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MAIN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 04:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 04:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Kingsland</NAME>
+          <TIME>05-Jan-2019 04:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Lyndhurst</NAME>
+          <TIME>05-Jan-2019 04:43:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Delawanna</NAME>
+          <TIME>05-Jan-2019 04:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Passaic</NAME>
+          <TIME>05-Jan-2019 04:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Clifton</NAME>
+          <TIME>05-Jan-2019 04:52:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Paterson</NAME>
+          <TIME>05-Jan-2019 04:59:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hawthorne</NAME>
+          <TIME>05-Jan-2019 05:04:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Main</NAME>
+          <TIME>05-Jan-2019 05:07:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 05:11:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 05:15:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 05:18:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Allendale</NAME>
+          <TIME>05-Jan-2019 05:23:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey</NAME>
+          <TIME>05-Jan-2019 05:27:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey Rt 17</NAME>
+          <TIME>05-Jan-2019 05:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mahwah</NAME>
+          <TIME>05-Jan-2019 05:33:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Suffern</NAME>
+          <TIME>05-Jan-2019 05:39:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>8</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 05:13:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Spring Valley -SEC</DESTINATION>
+      <TRACK>4</TRACK>
+      <LINE>Pascack Valley Line</LINE>
+      <TRAIN_ID>2121</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 06:26:13 PM</LAST_MODIFIED>
+      <BACKCOLOR>Purple </BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>PASC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 05:13:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 05:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wood-Ridge</NAME>
+          <TIME>05-Jan-2019 05:32:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Essex Street</NAME>
+          <TIME>05-Jan-2019 05:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Anderson St.</NAME>
+          <TIME>05-Jan-2019 05:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Bridge Ldg</NAME>
+          <TIME>05-Jan-2019 05:44:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>River Edge</NAME>
+          <TIME>05-Jan-2019 05:49:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Oradell</NAME>
+          <TIME>05-Jan-2019 05:52:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Emerson</NAME>
+          <TIME>05-Jan-2019 05:55:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Westwood</NAME>
+          <TIME>05-Jan-2019 05:58:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hillsdale</NAME>
+          <TIME>05-Jan-2019 06:01:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Park Ridge</NAME>
+          <TIME>05-Jan-2019 06:06:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Montvale</NAME>
+          <TIME>05-Jan-2019 06:08:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Pearl River</NAME>
+          <TIME>05-Jan-2019 06:11:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Nanuet</NAME>
+          <TIME>05-Jan-2019 06:16:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Spring Valley</NAME>
+          <TIME>05-Jan-2019 06:23:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>9</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 05:17:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Waldwick -SEC</DESTINATION>
+      <TRACK>9</TRACK>
+      <LINE>Bergen County Line</LINE>
+      <TRAIN_ID>1877</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 06:13:01 PM</LAST_MODIFIED>
+      <BACKCOLOR>Silver</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>silver</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>BERG</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 05:17:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 05:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rutherford</NAME>
+          <TIME>05-Jan-2019 05:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wesmont</NAME>
+          <TIME>05-Jan-2019 05:38:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Garfield</NAME>
+          <TIME>05-Jan-2019 05:41:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Plauderville</NAME>
+          <TIME>05-Jan-2019 05:44:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Broadway-Fl</NAME>
+          <TIME>05-Jan-2019 05:49:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Radburn-Fl</NAME>
+          <TIME>05-Jan-2019 05:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Boro</NAME>
+          <TIME>05-Jan-2019 05:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 06:00:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 06:04:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 06:08:15 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>10</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 05:25:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Suffern -SEC</DESTINATION>
+      <TRACK> </TRACK>
+      <LINE>Main Line</LINE>
+      <TRAIN_ID>1727</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 06:41:06 PM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MAIN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 05:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 05:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Kingsland</NAME>
+          <TIME>05-Jan-2019 05:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Lyndhurst</NAME>
+          <TIME>05-Jan-2019 05:43:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Delawanna</NAME>
+          <TIME>05-Jan-2019 05:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Passaic</NAME>
+          <TIME>05-Jan-2019 05:48:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Clifton</NAME>
+          <TIME>05-Jan-2019 05:52:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Paterson</NAME>
+          <TIME>05-Jan-2019 05:58:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hawthorne</NAME>
+          <TIME>05-Jan-2019 06:03:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Main</NAME>
+          <TIME>05-Jan-2019 06:07:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 06:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 06:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 06:18:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Allendale</NAME>
+          <TIME>05-Jan-2019 06:23:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey</NAME>
+          <TIME>05-Jan-2019 06:27:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey Rt 17</NAME>
+          <TIME>05-Jan-2019 06:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mahwah</NAME>
+          <TIME>05-Jan-2019 06:33:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Suffern</NAME>
+          <TIME>05-Jan-2019 06:40:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>11</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 06:10:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Bay Street</DESTINATION>
+      <TRACK> </TRACK>
+      <LINE>Montclair-Boonton Line</LINE>
+      <TRAIN_ID>535</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 06:49:16 PM</LAST_MODIFIED>
+      <BACKCOLOR>brown</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MNBTN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 06:10:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>05-Jan-2019 06:26:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Watsessing Ave</NAME>
+          <TIME>05-Jan-2019 06:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bloomfield</NAME>
+          <TIME>05-Jan-2019 06:40:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Ridge</NAME>
+          <TIME>05-Jan-2019 06:42:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bay Street</NAME>
+          <TIME>05-Jan-2019 06:45:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>12</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 06:13:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Port Jervis -SEC</DESTINATION>
+      <TRACK>7</TRACK>
+      <LINE>Bergen County Line</LINE>
+      <TRAIN_ID>79</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 08:19:37 PM</LAST_MODIFIED>
+      <BACKCOLOR>Silver</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>silver</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>BERG</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 06:13:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 06:22:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 06:42:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey Rt 17</NAME>
+          <TIME>05-Jan-2019 06:52:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Suffern</NAME>
+          <TIME>05-Jan-2019 06:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Sloatsburg</NAME>
+          <TIME>05-Jan-2019 07:04:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Tuxedo</NAME>
+          <TIME>05-Jan-2019 07:09:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Harriman</NAME>
+          <TIME>05-Jan-2019 07:19:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Salisbury Mls</NAME>
+          <TIME>05-Jan-2019 07:32:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Campbell Hall</NAME>
+          <TIME>05-Jan-2019 07:43:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Middletown NY</NAME>
+          <TIME>05-Jan-2019 07:50:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Otisville</NAME>
+          <TIME>05-Jan-2019 08:01:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Port Jervis</NAME>
+          <TIME>05-Jan-2019 08:23:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>13</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 06:17:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Waldwick -SEC</DESTINATION>
+      <TRACK> </TRACK>
+      <LINE>Bergen County Line</LINE>
+      <TRAIN_ID>1879</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>-60</SEC_LATE>
+      <LAST_MODIFIED>05-Jan-2019 02:18:12 PM</LAST_MODIFIED>
+      <BACKCOLOR>Silver</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>silver</SHADOWCOLOR>
+      <GPSLATITUDE>
+      </GPSLATITUDE>
+      <GPSLONGITUDE>
+      </GPSLONGITUDE>
+      <GPSTIME>05-Jan-2019 02:18:11 PM</GPSTIME>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>BERG</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 06:17:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>OnTime</STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 06:26:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Rutherford</NAME>
+          <TIME>05-Jan-2019 06:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wesmont</NAME>
+          <TIME>05-Jan-2019 06:38:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Garfield</NAME>
+          <TIME>05-Jan-2019 06:41:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Plauderville</NAME>
+          <TIME>05-Jan-2019 06:44:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Broadway-Fl</NAME>
+          <TIME>05-Jan-2019 06:49:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Radburn-Fl</NAME>
+          <TIME>05-Jan-2019 06:53:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Boro</NAME>
+          <TIME>05-Jan-2019 06:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 07:00:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 07:04:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 07:07:15 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>14</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 06:21:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Spring Valley -SEC</DESTINATION>
+      <TRACK>8</TRACK>
+      <LINE>Pascack Valley Line</LINE>
+      <TRAIN_ID>2123</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 07:30:31 PM</LAST_MODIFIED>
+      <BACKCOLOR>Purple </BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>PASC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 06:21:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 06:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Wood-Ridge</NAME>
+          <TIME>05-Jan-2019 06:40:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Essex Street</NAME>
+          <TIME>05-Jan-2019 06:45:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Anderson St.</NAME>
+          <TIME>05-Jan-2019 06:48:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>New Bridge Ldg</NAME>
+          <TIME>05-Jan-2019 06:52:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>River Edge</NAME>
+          <TIME>05-Jan-2019 06:56:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Oradell</NAME>
+          <TIME>05-Jan-2019 07:00:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Emerson</NAME>
+          <TIME>05-Jan-2019 07:03:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Westwood</NAME>
+          <TIME>05-Jan-2019 07:06:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hillsdale</NAME>
+          <TIME>05-Jan-2019 07:09:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Park Ridge</NAME>
+          <TIME>05-Jan-2019 07:14:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Montvale</NAME>
+          <TIME>05-Jan-2019 07:16:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Pearl River</NAME>
+          <TIME>05-Jan-2019 07:19:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Nanuet</NAME>
+          <TIME>05-Jan-2019 07:24:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Spring Valley</NAME>
+          <TIME>05-Jan-2019 07:31:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>15</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 06:25:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Suffern -SEC</DESTINATION>
+      <TRACK>10</TRACK>
+      <LINE>Main Line</LINE>
+      <TRAIN_ID>1729</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 07:38:10 PM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MAIN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 06:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 06:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Kingsland</NAME>
+          <TIME>05-Jan-2019 06:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Lyndhurst</NAME>
+          <TIME>05-Jan-2019 06:43:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Delawanna</NAME>
+          <TIME>05-Jan-2019 06:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Passaic</NAME>
+          <TIME>05-Jan-2019 06:48:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Clifton</NAME>
+          <TIME>05-Jan-2019 06:52:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Paterson</NAME>
+          <TIME>05-Jan-2019 06:58:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hawthorne</NAME>
+          <TIME>05-Jan-2019 07:03:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Main</NAME>
+          <TIME>05-Jan-2019 07:07:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 07:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 07:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 07:18:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Allendale</NAME>
+          <TIME>05-Jan-2019 07:23:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey</NAME>
+          <TIME>05-Jan-2019 07:27:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey Rt 17</NAME>
+          <TIME>05-Jan-2019 07:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mahwah</NAME>
+          <TIME>05-Jan-2019 07:33:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Suffern</NAME>
+          <TIME>05-Jan-2019 07:40:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>16</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 07:25:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Suffern -SEC</DESTINATION>
+      <TRACK>15</TRACK>
+      <LINE>Main Line</LINE>
+      <TRAIN_ID>1731</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 08:39:35 PM</LAST_MODIFIED>
+      <BACKCOLOR>yellow</BACKCOLOR>
+      <FORECOLOR>black</FORECOLOR>
+      <SHADOWCOLOR>yellow</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MAIN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 07:25:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 07:34:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Kingsland</NAME>
+          <TIME>05-Jan-2019 07:41:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Lyndhurst</NAME>
+          <TIME>05-Jan-2019 07:43:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Delawanna</NAME>
+          <TIME>05-Jan-2019 07:46:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Passaic</NAME>
+          <TIME>05-Jan-2019 07:48:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Clifton</NAME>
+          <TIME>05-Jan-2019 07:52:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Paterson</NAME>
+          <TIME>05-Jan-2019 07:58:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hawthorne</NAME>
+          <TIME>05-Jan-2019 08:03:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Rock Main</NAME>
+          <TIME>05-Jan-2019 08:07:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ridgewood</NAME>
+          <TIME>05-Jan-2019 08:11:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Hohokus</NAME>
+          <TIME>05-Jan-2019 08:15:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Waldwick</NAME>
+          <TIME>05-Jan-2019 08:18:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Allendale</NAME>
+          <TIME>05-Jan-2019 08:23:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey</NAME>
+          <TIME>05-Jan-2019 08:27:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Ramsey Rt 17</NAME>
+          <TIME>05-Jan-2019 08:30:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Mahwah</NAME>
+          <TIME>05-Jan-2019 08:33:45 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Suffern</NAME>
+          <TIME>05-Jan-2019 08:40:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>17</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 07:29:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Spring Valley -SEC</DESTINATION>
+      <TRACK>16</TRACK>
+      <LINE>Pascack Valley Line</LINE>
+      <TRAIN_ID>2125</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 08:29:31 PM</LAST_MODIFIED>
+      <BACKCOLOR>Purple </BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>PASC</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 07:29:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Secaucus</NAME>
+          <TIME>05-Jan-2019 07:38:30 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Pearl River</NAME>
+          <TIME>05-Jan-2019 08:10:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Nanuet</NAME>
+          <TIME>05-Jan-2019 08:19:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Spring Valley</NAME>
+          <TIME>05-Jan-2019 08:27:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+    <ITEM>
+      <ITEM_INDEX>18</ITEM_INDEX>
+      <SCHED_DEP_DATE>05-Jan-2019 08:08:00 PM</SCHED_DEP_DATE>
+      <DESTINATION>Bay Street</DESTINATION>
+      <TRACK>12</TRACK>
+      <LINE>Montclair-Boonton Line</LINE>
+      <TRAIN_ID>539</TRAIN_ID>
+      <CONNECTING_TRAIN_ID>
+      </CONNECTING_TRAIN_ID>
+      <STATUS> </STATUS>
+      <SEC_LATE>0</SEC_LATE>
+      <LAST_MODIFIED>01-Jan-2019 08:47:43 PM</LAST_MODIFIED>
+      <BACKCOLOR>brown</BACKCOLOR>
+      <FORECOLOR>white</FORECOLOR>
+      <SHADOWCOLOR>black</SHADOWCOLOR>
+      <STATION_POSITION>0</STATION_POSITION>
+      <LINEABBREVIATION>MNBTN</LINEABBREVIATION>
+      <INLINEMSG>
+      </INLINEMSG>
+      <STOPS>
+        <STOP>
+          <NAME>Hoboken</NAME>
+          <TIME>05-Jan-2019 08:08:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Newark Broad</NAME>
+          <TIME>05-Jan-2019 08:26:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Watsessing Ave</NAME>
+          <TIME>05-Jan-2019 08:38:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bloomfield</NAME>
+          <TIME>05-Jan-2019 08:40:00 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Glen Ridge</NAME>
+          <TIME>05-Jan-2019 08:42:15 PM</TIME>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+        <STOP>
+          <NAME>Bay Street</NAME>
+          <TIME>05-Jan-2019 08:45:00 PM</TIME>
+          <DROPOFF>Discharge Only</DROPOFF>
+          <DEPARTED>NO</DEPARTED>
+          <STOP_STATUS>
+          </STOP_STATUS>
+        </STOP>
+      </STOPS>
+    </ITEM>
+  </ITEMS>
+</STATION>
