@@ -141,7 +141,7 @@ jobs:
             rm -r lambda_deploy/fakeredis*
             rm -r lambda_deploy/coverage*
             rm -r lambda_deploy/codecov*
-            rm lambda_deploy/*.so
+            rm -f lambda_deploy/*.so
             rm -r lambda_deploy/__pycache__
             rm -r lambda_deploy/docutils*
             rm -r lambda_deploy/astroid*
