@@ -3,7 +3,7 @@ pylint==2.3.1
 fakeredis==1.0.3
 responses==0.10.6
 python-lambda-local==0.1.6
-redis==3.2.1
+redis==4.4.4
 pytz==2019.1
 
 
